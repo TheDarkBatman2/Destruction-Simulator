@@ -2,36 +2,35 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed = 0.5f;
-    private Rigidbody rb;
+    public float movementSpeed = 10f;
+    public float zoomSpeed = 200f;
+    public float rotateSpeed = 100f;
+    public GameObject structure;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f; // max distance from ground after that it will say you are grounded
-    public LayerMask groundMask; // layers it can have collision with it
-    public float jumpHeight = 3.0f;
-    private bool isGrounded;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
 
-        // jump system
-        isGrounded = Physics.CheckSphere(groundCheck.position , groundDistance , groundMask);
-
-        if (Input.GetButtonDown("Jump") && isGrounded){
-            rb.AddForce(Vector3.up * jumpHeight);
-            isGrounded = false;
-        }
-
         // movement system
         float x = Input.GetAxis("Horizontal");
+        float y =Input.GetAxis("Mouse ScrollWheel");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = (transform.right * x + transform.forward * z) * movementSpeed * Time.deltaTime ;
-        
-        rb.MovePosition(transform.position + move);
+
+        //move up and down
+        Vector3 moveUp = (transform.up * z) * movementSpeed * Time.deltaTime ;
+        transform.position+=moveUp;
+
+        //zoom in and out
+        Vector3 moveFor = (transform.forward * y) * zoomSpeed * Time.deltaTime ;
+        transform.position+=moveFor;
+
+        //rotate around the structure
+        transform.RotateAround(structure.transform.position, structure.transform.up * -x, rotateSpeed*Time.deltaTime);
+
+    
     }
 }
