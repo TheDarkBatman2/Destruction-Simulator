@@ -15,10 +15,8 @@ public class PlayerMovement : MonoBehaviour
     {
 
         // movement system
-        float x = Input.GetAxis("Horizontal");
         float y =Input.GetAxis("Mouse ScrollWheel");
         float z = Input.GetAxis("Vertical");
-
 
         //move up and down
         Vector3 moveUp = (transform.up * z) * movementSpeed * Time.deltaTime ;
@@ -29,7 +27,13 @@ public class PlayerMovement : MonoBehaviour
         transform.position+=moveFor;
 
         //rotate around the structure
-        transform.RotateAround(structure.transform.position, structure.transform.up * -x, rotateSpeed*Time.deltaTime);
+        if (Input.GetKey(KeyCode.D)){
+            transform.RotateAround(structure.transform.position, structure.transform.up * -1, rotateSpeed*Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.A)){
+            transform.RotateAround(structure.transform.position, structure.transform.up * 1, rotateSpeed*Time.deltaTime);
+        }
+        
 
     
     }
