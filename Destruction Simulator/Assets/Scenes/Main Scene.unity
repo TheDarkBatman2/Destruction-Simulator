@@ -1277,7 +1277,7 @@ MonoBehaviour:
   bombPrefab: {fileID: 919132149155446097, guid: e5ae7a89df3b4374588ce16103261c60, type: 3}
   plantSpots:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
 --- !u!136 &1572783295
 CapsuleCollider:
   m_ObjectHideFlags: 0
