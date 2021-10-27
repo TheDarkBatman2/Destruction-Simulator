@@ -23,13 +23,13 @@ public class MeshDestroy : MonoBehaviour
     // Update is called once per frame
     void OnCollisionEnter(Collision collision)
     {
-     Vector3 velocity = collision.relativeVelocity;
-    if (velocity.magnitude > minForce){
-        DestroyMesh();
-    }
+        Vector3 velocity = collision.relativeVelocity;
+        if (velocity.magnitude > minForce){
+            DestroyMesh();
+        }
     }
 
-    private void DestroyMesh()
+    public void DestroyMesh()
     {
         var originalMesh = GetComponent<MeshFilter>().mesh;
         originalMesh.RecalculateBounds();
@@ -294,6 +294,7 @@ public class MeshDestroy : MonoBehaviour
 
             var rigidbody = GameObject.AddComponent<Rigidbody>();
             var meshDestroy = GameObject.AddComponent<MeshDestroy>();
+            GameObject.layer = 9;
             meshDestroy.CutCascades = original.CutCascades;
             meshDestroy.ExplodeForce = original.ExplodeForce;
 
