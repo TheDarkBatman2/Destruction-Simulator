@@ -6,8 +6,10 @@ public class BombExplosion : MonoBehaviour
 {
     public SoundManager soundManager;
     public float explosionDelay = 2f;
+    public List<GameObject> explodeObjects ;
     void Start()
     {
+        explodeObjects= new List<GameObject>();
         Invoke("Explode" , explosionDelay);
     }
 
@@ -16,10 +18,24 @@ public class BombExplosion : MonoBehaviour
     {
         
     }
-
+    void OnTriggerEnter(Collider other)
+    {
+        //game objects that have to be destroyed at explosion
+        if(other.gameObject.layer == 9)
+        {
+            
+            explodeObjects.Add(other.gameObject);
+        }
+        
+    }
     public void Explode()
     {
-        Destroy(gameObject);
+         foreach (GameObject explodeObject in explodeObjects)
+         {
+             Destroy(explodeObject);   
+         }
+        Destroy(this.gameObject);
+
     }
 
     private void OnDestroy() {
