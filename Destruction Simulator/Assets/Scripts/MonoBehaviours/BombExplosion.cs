@@ -35,6 +35,6 @@ public class BombExplosion : MonoBehaviour
     }
 
     private void OnDestroy() {
-        soundManager.PlaySound3D(SoundLibrary.sfxLibrary3D["bomb_explosion"] , transform.position);
+        SoundManager.PlaySound3D(SoundLibrary.sfxLibrary3D["bomb_explosion"] , transform.position);
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1757085507033549645}
   m_Layer: 0
   m_Name: SoundObject2D
-  m_TagString: Untagged
+  m_TagString: SoundObject2D
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

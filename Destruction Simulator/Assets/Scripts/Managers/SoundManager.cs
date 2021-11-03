@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
-
-public class SoundManager : MonoBehaviour 
+using System.Linq;
+public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private GameObject soundObject2D;
-    [SerializeField] private GameObject soundObject3D;
-    public void PlaySound2D(AudioClip soundClip, float volume = 0.4f, float variance = 0.2f) {
+    [SerializeField] private static GameObject soundObject2D;
+    [SerializeField] private static GameObject soundObject3D;
+
+    private void Awake() {
+        soundObject2D = Resources.Load<GameObject>("SoundObjects/SoundObject2D");
+        soundObject3D = Resources.Load<GameObject>("SoundObjects/SoundObject3D");
+    }
+    public static void PlaySound2D(AudioClip soundClip, float volume = 0.4f, float variance = 0.2f) {
         GameObject newSound = Instantiate(soundObject2D);
         AudioSource soundSource = newSound.GetComponent<AudioSource>();
 
@@ -16,7 +21,7 @@ public class SoundManager : MonoBehaviour
         Destroy(newSound, soundClip.length);
     }
 
-    public void PlaySound3D(AudioClip soundClip, Vector3 position, float volume = 0.4f, float variance = 0.2f) {
+    public static void PlaySound3D(AudioClip soundClip, Vector3 position, float volume = 0.4f, float variance = 0.2f) {
         GameObject newSound = Instantiate(soundObject3D , position , Quaternion.Euler(0, 0, 0));
         AudioSource soundSource = newSound.GetComponent<AudioSource>();
 
