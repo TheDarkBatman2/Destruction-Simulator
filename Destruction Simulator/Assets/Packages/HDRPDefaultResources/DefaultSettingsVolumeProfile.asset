@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   intensity:
     m_OverrideState: 1
     m_Value: 0.5
@@ -59,7 +59,7 @@ MonoBehaviour:
     max: 20
   m_SampleCount:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 12
     min: 2
 --- !u!114 &-1016694868962581565
 MonoBehaviour:
@@ -202,10 +202,10 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {fileID: 8900000, guid: 8253d41e6e8b11a4cbe77a4f8f82934d, type: 3}
   enableDistortion:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   procedural:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   flowmap:
     m_OverrideState: 0
@@ -214,12 +214,12 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   scrollDirection:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
     min: 0
     max: 360
   scrollSpeed:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
     min: 0
   enableBackplate:
@@ -289,7 +289,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
   threshold:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
     min: 0
   intensity:
@@ -467,7 +467,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   adaptationSpeedDarkToLight:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 3
     min: 0.001
   adaptationSpeedLightToDark:
@@ -522,7 +522,7 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   quality:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   rayTracing:
     m_OverrideState: 0
@@ -566,40 +566,40 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 4294967295
   m_StepCount:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 6
     min: 2
     max: 32
   m_FullResolution:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   m_MaximumRadiusInPixels:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 40
     min: 16
     max: 256
   m_BilateralUpsample:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   m_DirectionCount:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
     min: 1
     max: 6
   m_RayLength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 3
     min: 0
   m_SampleCount:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
     min: 1
     max: 64
   m_Denoise:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   m_DenoiserRadius:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
     min: 0.001
     max: 1
