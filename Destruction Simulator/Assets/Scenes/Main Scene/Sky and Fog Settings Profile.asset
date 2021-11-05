@@ -50,13 +50,13 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   type:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0
   sphericalMode:
     m_OverrideState: 0
     m_Value: 1
   seaLevel:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   planetaryRadius:
     m_OverrideState: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
     min: 1
     max: 10
   groundTint:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 0.4, g: 0.25, b: 0.15, a: 1}
     hdr: 0
     showAlpha: 0
@@ -160,19 +160,19 @@ MonoBehaviour:
     min: 0
     max: 1
   horizonTint:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 0
   zenithTint:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 0
   horizonZenithShift:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
     min: -1
     max: 1
