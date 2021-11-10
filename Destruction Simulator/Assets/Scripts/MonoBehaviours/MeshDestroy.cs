@@ -55,6 +55,10 @@ public class MeshDestroy : MonoBehaviour
             {
                 var bounds = parts[i].Bounds;
                 bounds.Expand(0.5f);
+                /*
+                Bounding boxes are good to get very approximate relative locations of things. Since bounding box intersection is a very simple and fast calculation (relative to complex collision or similar)... you can rule out things being anywhere near each other if their bounding boxes don't intersect. Sure, they might not be intersecting even if the bounds are intersecting... but if the bounds don't, then they certainly aren't. It'd be like saying "can Sally touch Sam?"... "Well Sam and Sally aren't in the same room, so surely Sally can't touch Sam".
+                i think bounds are locations that object can render*
+                */
 
                 var plane = new Plane(UnityEngine.Random.onUnitSphere, new Vector3(UnityEngine.Random.Range(bounds.min.x, bounds.max.x),
                                                                                    UnityEngine.Random.Range(bounds.min.y, bounds.max.y),

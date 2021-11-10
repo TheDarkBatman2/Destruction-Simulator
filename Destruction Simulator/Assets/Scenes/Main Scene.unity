@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 5832.802, g: 3700.7832, b: 2194.6406, a: 1}
+  m_IndirectSpecularColor: {r: 5406.9614, g: 3210.8594, b: 1644.998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1162,8 +1162,8 @@ GameObject:
   - component: {fileID: 1287809567}
   - component: {fileID: 1287809566}
   - component: {fileID: 1287809570}
-  - component: {fileID: 1287809569}
   - component: {fileID: 1287809565}
+  - component: {fileID: 1287809569}
   m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
@@ -1185,7 +1185,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!23 &1287809566
 MeshRenderer:
@@ -1260,12 +1260,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1287809564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 227b0e17c9b913c4987caee7c85d5bf1, type: 3}
+  m_Script: {fileID: 11500000, guid: b5e49945425545548b05a7d14583be70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CutCascades: 2
-  ExplodeForce: 20
-  minForce: 10
+  meshCollider: {fileID: 0}
+  vertexWeight: {fileID: 6297159838398918553, guid: c25fc0e12a2d7fc4fa865e5e66f6aef0, type: 3}
 --- !u!64 &1287809570
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1788,12 +1787,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1971528796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 227b0e17c9b913c4987caee7c85d5bf1, type: 3}
+  m_Script: {fileID: 11500000, guid: b5e49945425545548b05a7d14583be70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CutCascades: 1
-  ExplodeForce: 0
-  minForce: 10
+  meshCollider: {fileID: 0}
+  vertexWeight: {fileID: 6297159838398918553, guid: c25fc0e12a2d7fc4fa865e5e66f6aef0, type: 3}
 --- !u!54 &1971528798
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1805,10 +1803,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!64 &1971528799
 MeshCollider:
