@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 5406.9614, g: 3210.8594, b: 1644.998, a: 1}
+  m_IndirectSpecularColor: {r: 5404.2495, g: 3211.0098, b: 1645.1797, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1163,7 +1163,6 @@ GameObject:
   - component: {fileID: 1287809566}
   - component: {fileID: 1287809570}
   - component: {fileID: 1287809565}
-  - component: {fileID: 1287809569}
   m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
@@ -1185,7 +1184,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!23 &1287809566
 MeshRenderer:
@@ -1251,20 +1250,6 @@ Transform:
   m_Father: {fileID: 145764714}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1287809569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287809564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e49945425545548b05a7d14583be70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshCollider: {fileID: 0}
-  vertexWeight: {fileID: 6297159838398918553, guid: c25fc0e12a2d7fc4fa865e5e66f6aef0, type: 3}
 --- !u!64 &1287809570
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1504,6 +1489,9 @@ MonoBehaviour:
   plantSpots:
     serializedVersion: 2
     m_Bits: 768
+  explodableObjects:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!136 &1572783295
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1778,20 +1766,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d79d4cd353f87824caf35d775978c04f, type: 3}
   m_PrefabInstance: {fileID: 1971528795}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1971528797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971528796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e49945425545548b05a7d14583be70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshCollider: {fileID: 0}
-  vertexWeight: {fileID: 6297159838398918553, guid: c25fc0e12a2d7fc4fa865e5e66f6aef0, type: 3}
 --- !u!54 &1971528798
 Rigidbody:
   m_ObjectHideFlags: 0

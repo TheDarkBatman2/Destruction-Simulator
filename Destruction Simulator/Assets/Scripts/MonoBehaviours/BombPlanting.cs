@@ -5,6 +5,7 @@ public class BombPlanting : MonoBehaviour
     public SoundManager soundManager;
     public GameObject bombPrefab;
     public LayerMask plantSpots;
+    public LayerMask explodableObjects;
     void Update()
     {
         if (Input.GetButtonDown("Fire1")){
@@ -22,6 +23,7 @@ public class BombPlanting : MonoBehaviour
                 // we can add collider to prefab itself but we have more control if we add it from code
                 BombExplosion bombExplosion = bombClone.AddComponent<BombExplosion>();
                 bombExplosion.soundManager = soundManager;
+                bombExplosion.explodableObjects = explodableObjects;
                 // you can add component itself to prefab later , search in internet ( its task )
                 //*bombCollider.size = bombCollider.size.x * 2;
                 
