@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: blankItem
   m_EditorClassIdentifier: 
   itemType: 0
+  explosionForce: 1
+  explosionVfx: {fileID: 0}
+  audioClip: {fileID: 0}
+  audioVolume: 0.03
+  cameraShakeStrength: 0
+  cameraShakeTimeScale: 0
   itemName: blankItem
   itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  description: 

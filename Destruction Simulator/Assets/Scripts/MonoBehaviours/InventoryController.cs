@@ -30,20 +30,25 @@ public class InventoryController : MonoBehaviour
         if (Input.GetButtonDown("Fire1")){
             // will get current item
             // Fire code here
-            Fire(hotbarController.hotbarSlots[hotbarController.activeSlot].GetItem());
+            Fire(hotbarController.hotbarSlots[hotbarController.activeSlot]);
         }        
     }
 
-    public void Fire(ExplosiveItem item){
-        if (item != null){
-            if (item.itemType == ExplosiveItem.ExplosionType.Missile){
-                // Missile
-            }
-            else if (item.itemType == ExplosiveItem.ExplosionType.TimeBomb){
-                // TimeBomb
-            }
-            else if (item.itemType == ExplosiveItem.ExplosionType.Cannon){
-                // Cannon
+    public void Fire(ItemSlot slot){
+        ExplosiveItem item = slot.GetItem();
+        if (item != null){ // it wont happen that slot doesnt have set item , but still :)
+            if (slot.itemAmount >= 1){
+                slot.DecreaseItemAmount(1);
+
+                if (item.itemType == ExplosiveItem.ExplosionType.Missile){
+                    // Missile
+                }
+                else if (item.itemType == ExplosiveItem.ExplosionType.TimeBomb){
+                    // TimeBomb
+                }
+                else if (item.itemType == ExplosiveItem.ExplosionType.Cannon){
+                    // Cannon
+                }
             }
         }
         
