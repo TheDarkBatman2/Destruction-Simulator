@@ -619,8 +619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886675945ee4f4941a9f301222de809c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotbarController: {fileID: 0}
-  blankItem: {fileID: 11400000, guid: 724fa71edbb5c8d4a9a1d8dcf69244e1, type: 2}
 --- !u!114 &585586277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,10 +631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480e7d2bb9177a44b89a920b307bb190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryController: {fileID: 0}
-  activeSlot: 0
-  hotbarSlots: []
-  hotbarKeys: 310000003200000033000000340000003500000036000000370000003800000039000000
 --- !u!1001 &610206010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2780,7 +2774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450095316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.086, z: 0}
+  m_LocalPosition: {x: 0, y: -1.243, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1572783298}
