@@ -6,27 +6,42 @@ public class BombPlanting : MonoBehaviour
     public GameObject bombPrefab;
     public LayerMask plantSpots;
     public LayerMask explodableObjects;
+    public GameObject throwableObj; 
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1")){
-            Fire();
-        }        
+            throwBall();
+        }  
+        if (Input.GetButtonDown("Fire2")){
+            BombPlant();
+        }      
     }
 
-    private void Fire(){
+    private void throwBall()
+    {
+        Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+           
+      Vector3 dir = r.GetPoint(1) - r.GetPoint(0);
+ 
+      GameObject bullet = Instantiate(throwableObj, r.GetPoint(2), Quaternion.LookRotation(dir));
+ 
+      bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 100;
+      Destroy(bullet, 3);
+      
+    }
+    private void BombPlant()
+    {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
         if (Physics.Raycast(ray , out hitInfo , 100f)){
             if (plantSpots == (plantSpots | 1<<hitInfo.transform.gameObject.layer)){
                 GameObject bombClone = Instantiate(bombPrefab , hitInfo.point , Quaternion.LookRotation(hitInfo.normal));
-                //*BoxCollider bombCollider = bombClone.AddComponent<BoxCollider>(); 
-                // we can add collider to prefab itself but we have more control if we add it from code
+                
                 BombExplosion bombExplosion = bombClone.AddComponent<BombExplosion>();
                 bombExplosion.soundManager = soundManager;
                 bombExplosion.explodableObjects = explodableObjects;
-                // you can add component itself to prefab later , search in internet ( its task )
-                //*bombCollider.size = bombCollider.size.x * 2;
-                
+
             }
         }
 
