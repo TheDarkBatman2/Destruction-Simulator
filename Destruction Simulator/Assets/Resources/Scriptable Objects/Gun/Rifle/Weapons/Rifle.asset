@@ -21,3 +21,4 @@ MonoBehaviour:
   bulletSpeed: 100
   bulletSpread: 5
   bulletPrefab: {fileID: 4015730959525617916, guid: 04fad87d6e2d2b14ba5f6fd44f1bbebb, type: 3}
+  recoilForce: 0
