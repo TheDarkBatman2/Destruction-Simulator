@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Defulat Item
   itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  itemObject: {fileID: 5314121505141237649, guid: 7e6895bec809e6a4cb2bb1e325d9a2a5, type: 3}
   description: 
-  reloadTime: 0
+  reloadTime: 2
+  fireRate: 20
   clipSize: 30
   bulletSpeed: 100
-  bulletSpread: 0
+  bulletSpread: 5
   bulletPrefab: {fileID: 4015730959525617916, guid: 04fad87d6e2d2b14ba5f6fd44f1bbebb, type: 3}

@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
 
         // jump system
-        isGrounded = Physics.CheckSphere(groundCheck.position , groundDistance , groundMask);
+        isGrounded = Physics.Raycast(groundCheck.position ,Vector3.down ,groundDistance ,groundMask);
+        
 
         if (Input.GetButtonDown("Jump") && isGrounded){
             rb.AddForce(Vector3.up * jumpHeight);

@@ -52,9 +52,9 @@ public class ItemSlot : MonoBehaviour
     }
 
 
-    public void EmptySlot(Item blankItem){
+    public void EmptySlot(){
         // set slot to blank and 0 item amount
-        SetItem(blankItem);
+        SetItem(References.Instance.blankItem);
 
     }
 

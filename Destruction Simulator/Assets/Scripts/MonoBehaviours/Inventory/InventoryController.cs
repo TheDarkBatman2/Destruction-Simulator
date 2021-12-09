@@ -6,9 +6,7 @@ public class InventoryController : MonoBehaviour
 {
     HotbarContoller hotbarController;
     public Item blankItem;
-    public Camera fpsCam;
     public float pickupRange = 5f;
-    public Transform gunContainer;
     void Start()
     {
         hotbarController = this.GetComponent<HotbarContoller>();
@@ -56,7 +54,7 @@ public class InventoryController : MonoBehaviour
     }
 
     void CheckItem(){
-        Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f ,0.5f ,0));
+        Ray ray = References.Instance.fpsCam.ViewportPointToRay(new Vector3(0.5f ,0.5f ,0));
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit ,pickupRange)){
@@ -93,7 +91,7 @@ public class InventoryController : MonoBehaviour
         PickupController droppedItemPickupController = currSlot.itemObject.AddComponent<PickupController>();
         droppedItemPickupController.item = currSlot.GetItem();
         droppedItemPickupController.OnDrop();
-        currSlot.EmptySlot(blankItem);
+        currSlot.EmptySlot();
     }
 
 

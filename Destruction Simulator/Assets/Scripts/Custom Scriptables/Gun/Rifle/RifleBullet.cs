@@ -4,8 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 [CreateAssetMenu(fileName = "RifleBullet", menuName ="Bullets/Rifle")]
-public class RifleBullet : ScriptableObject
+public class RifleBullet : Bullet
 {
-    public float damage;
-    public float lifeTime;
+    
 }

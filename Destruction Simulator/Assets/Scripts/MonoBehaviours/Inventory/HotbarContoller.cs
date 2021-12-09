@@ -50,8 +50,8 @@ public class HotbarContoller : MonoBehaviour
     }
 
     private void FixScale_Parent(GameObject obj){ // Scale
-        inventoryController.gunContainer.transform.localScale = obj.transform.localScale;
-        obj.transform.SetParent(inventoryController.gunContainer);
+        References.Instance.gunContainer.transform.localScale = obj.transform.localScale;
+        obj.transform.SetParent(References.Instance.gunContainer);
         obj.transform.localPosition = Vector3.zero;
         obj.transform.localRotation = Quaternion.Euler(Vector3.zero);
         obj.transform.localScale = Vector3.one;

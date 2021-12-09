@@ -15,4 +15,8 @@ public class RifleBulletBehaviour : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter(Collision other) {
+        Destroy(this.gameObject);
+    }
 }

@@ -40,6 +40,7 @@ public class PickupController : MonoBehaviour
         Rigidbody rb = this.GetComponent<Rigidbody>();
         rb.AddForce(this.transform.forward * 10, ForceMode.Impulse);
         rb.AddForce(this.transform.up * 10, ForceMode.Impulse);
+        rb.velocity += References.Instance.playerVelocity;
 
         //Add random rotation
         float random = Random.Range(-2f, 2f);
