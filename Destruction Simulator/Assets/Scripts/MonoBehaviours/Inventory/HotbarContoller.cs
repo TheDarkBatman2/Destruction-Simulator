@@ -21,11 +21,40 @@ public class HotbarContoller : MonoBehaviour
         for (int i = 0; i < hotbarKeys.Length; i++){
             if (Input.GetKeyDown(hotbarKeys[i]))
             {
-                //hight light here
+                // hight light here
+
+                // disable previous object
+                DisableSlot(activeSlot);
                 activeSlot = i;
-                // inventoryController.UpdateInventory();
+                // enable current object
+                // it will be in update inventory method
             }
+            inventoryController.UpdateInventory();
         }
+    }
+
+    public void ActivateSlot(int indx){
+        GameObject obj = hotbarSlots[indx].itemObject;
+        if (obj != null){
+            obj.SetActive(true);
+            FixScale_Parent(obj);
+        }
+    }
+
+    private void DisableSlot(int indx){
+        GameObject obj = hotbarSlots[indx].itemObject;
+        if (obj != null){
+            obj.transform.SetParent(null); // to make sure if i fix scale it wont bug anything
+            obj.SetActive(false);
+        }
+    }
+
+    private void FixScale_Parent(GameObject obj){ // Scale
+        inventoryController.gunContainer.transform.localScale = obj.transform.localScale;
+        obj.transform.SetParent(inventoryController.gunContainer);
+        obj.transform.localPosition = Vector3.zero;
+        obj.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        obj.transform.localScale = Vector3.one;
     }
 
     private void SetUpHotbarSlots(){

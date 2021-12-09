@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class ItemSlot : MonoBehaviour
 {
     public Sprite icon;
-    private ExplosiveItem item;
+    private Item item;
     public int itemAmount = 0;
+    public GameObject itemObject;
 
     // we need to check if slot is empty or not AND to update inventory so we make it functional
     public int IncreaseItemAmount(int amount){
@@ -26,32 +27,34 @@ public class ItemSlot : MonoBehaviour
         }
         else
         {
-            EmptySlot();
+            // EmptySlot();
         }
         return amount; // just incase if we needed it
     }
 
     //Encapsulation
-    public ExplosiveItem GetItem(){
+    public Item GetItem(){
         return item;
     }
 
     
 
-    public void SetItem(ExplosiveItem newItem ,int amount = 0)
+    public void SetItem(Item newItem ,GameObject newItemObject = null ,int amount = 0)
     {
         // print(newItem.itemIcon);
         item = newItem;
         icon = newItem.itemIcon;
         itemAmount = amount;
+        itemObject = newItemObject;
         // will change image of child , so it will display item
         // Auto update
         transform.GetChild(0).GetComponent<Image>().sprite = icon;
     }
 
 
-    public void EmptySlot(){
+    public void EmptySlot(Item blankItem){
         // set slot to blank and 0 item amount
+        SetItem(blankItem);
 
     }
 
