@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: BlankItem
   m_EditorClassIdentifier: 
   itemName: BlankItem
-  itemIcon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  itemIcon: {fileID: 21300000, guid: b9a97945fce882844a01d9fca1628296, type: 3}
   description: 
+  originalPrefab: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 3356.2256, g: 3991, b: 4718.5234, a: 1}
+  m_IndirectSpecularColor: {r: 3356.0542, g: 3991.0684, b: 4718.3555, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1611,6 +1611,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 585586272}
     m_Modifications:
+    - target: {fileID: 196389067657416875, guid: 332939a608bfac8468458726d9aceb15, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 196389067657416875, guid: 332939a608bfac8468458726d9aceb15, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 196389067657416875, guid: 332939a608bfac8468458726d9aceb15, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5251581314028712811, guid: 332939a608bfac8468458726d9aceb15, type: 3}
       propertyPath: m_Name
       value: HotbarButton
