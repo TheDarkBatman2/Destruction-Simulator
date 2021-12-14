@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class HotbarContoller : MonoBehaviour
 {
@@ -50,10 +51,16 @@ public class HotbarContoller : MonoBehaviour
     }
 
     private void FixScale_Parent(GameObject obj){ // Scale
+        // for most cases Indx is active slot , if it caused bug fix it :)
         References.Instance.gunContainer.transform.localScale = obj.transform.localScale;
         obj.transform.SetParent(References.Instance.gunContainer);
         obj.transform.localPosition = Vector3.zero;
-        obj.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        if (hotbarSlots[activeSlot].GetItem().originalPrefab != null){
+            obj.transform.localRotation = hotbarSlots[activeSlot].GetItem().originalPrefab.transform.rotation; // it will set rotation to original prefab rotation so it will be useful in some cases
+        }
+        else {
+            obj.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        }        
         obj.transform.localScale = Vector3.one;
     }
 

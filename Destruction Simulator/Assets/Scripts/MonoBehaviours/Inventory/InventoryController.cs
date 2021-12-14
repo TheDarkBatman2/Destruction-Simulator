@@ -26,7 +26,7 @@ public class InventoryController : MonoBehaviour
         // show current activate slot
         ItemSlot activeSlot = hotbarController.hotbarSlots[hotbarController.activeSlot];
         if (activeSlot.GetItem() != blankItem){ // For sure every item has prefab
-            if (activeSlot.itemObject.activeSelf == false){
+            if (activeSlot.itemObject.activeSelf == false){ // to avoid laggy stuff , so it will check if its already activated or not
                 hotbarController.ActivateSlot(hotbarController.activeSlot);
             }
         }

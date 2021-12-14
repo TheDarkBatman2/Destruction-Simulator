@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Defulat Item
   itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   description: 
+  originalPrefab: {fileID: 6203985196886591649, guid: 2fd640dcd28b0d14da503ed88a3abbca, type: 3}
   reloadTime: 2
   fireRate: 20
   clipSize: 30

@@ -141,12 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b6eb590681f4c41ac041f6eebf7d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rifleItem: {fileID: 0}
+  rifleItem: {fileID: 11400000, guid: 7de3a6275c8940f49b00c7f8c440486f, type: 2}
   GunTip: {fileID: 3379804917941777460}
   totalAmmo: 500
   clipAmmo: 0
   reloaded: 1
-  fpsCam: {fileID: 0}
 --- !u!114 &2401206219350799680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,4 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc7160fa1cd8714cb0d3ce30df70213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 7de3a6275c8940f49b00c7f8c440486f, type: 2}
