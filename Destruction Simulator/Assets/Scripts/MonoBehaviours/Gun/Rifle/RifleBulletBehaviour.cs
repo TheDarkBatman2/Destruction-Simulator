@@ -17,6 +17,10 @@ public class RifleBulletBehaviour : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Enemy"){
+            other.gameObject.GetComponent<EnemyBehaviour>().Damage(rifleBullet.damage);
+        }
+        
         Destroy(this.gameObject);
     }
 }

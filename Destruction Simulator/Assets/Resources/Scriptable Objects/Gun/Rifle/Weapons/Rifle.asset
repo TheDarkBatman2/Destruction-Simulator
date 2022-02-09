@@ -18,7 +18,7 @@ MonoBehaviour:
   originalPrefab: {fileID: 6203985196886591649, guid: 2fd640dcd28b0d14da503ed88a3abbca, type: 3}
   reloadTime: 2
   fireRate: 20
-  clipSize: 30
+  clipSize: 100
   bulletSpeed: 100
   bulletSpread: 5
   bulletPrefab: {fileID: 4015730959525617916, guid: 04fad87d6e2d2b14ba5f6fd44f1bbebb, type: 3}

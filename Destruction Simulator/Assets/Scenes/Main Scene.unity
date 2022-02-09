@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 3356.0542, g: 3991.0684, b: 4718.3555, a: 1}
+  m_IndirectSpecularColor: {r: 3356.2256, g: 3991, b: 4718.5234, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -783,6 +783,10 @@ PrefabInstance:
       propertyPath: fpsCam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
+      propertyPath: sphere
+      value: 
+      objectReference: {fileID: 6453386608903314559, guid: 5a1458f889fdc5f45aac4d83e7e9c108, type: 3}
     - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: playerRb
       value: 

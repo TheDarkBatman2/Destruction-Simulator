@@ -43,6 +43,7 @@ public class InventoryController : MonoBehaviour
 
         // Pickup
         if (Input.GetKeyDown(KeyCode.E)){
+            // if it has valid state it will pickup item in range
             CheckItem();
         }
 

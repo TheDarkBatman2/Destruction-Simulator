@@ -52,12 +52,17 @@ public class RifleBehaviour : MonoBehaviour
     {  
         // Find target location
         Ray ray = References.Instance.fpsCam.ViewportPointToRay(new Vector3(0.5f ,0.5f ,0));
+        // RaycastHit hit;
+        // if (Physics.Raycast(ray, out hit))
+        //     Instantiate(References.Instance.sphere, hit.point, Quaternion.Euler(Vector3.zero));
+                    
 
         // We just get static point on ray to make our spread global and not changable
         Vector3 targetPoint = ray.GetPoint(100);
 
         // calculate direction
         Vector3 directionWithoutSpread = targetPoint - GunTip.position;
+        print(GunTip.position);
         
         // spread
         float x = Random.Range(-rifleItem.bulletSpread ,rifleItem.bulletSpread);
@@ -72,7 +77,7 @@ public class RifleBehaviour : MonoBehaviour
         currentBullet.transform.forward = directionWithSpread.normalized;
 
         // add force
-        currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * rifleItem.bulletSpeed ,ForceMode.Impulse);
+        currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * rifleItem.bulletSpeed);
         currentBullet.GetComponent<Rigidbody>().velocity += References.Instance.playerVelocity;
         Destroy(currentBullet ,currentBullet.GetComponent<RifleBulletBehaviour>().rifleBullet.lifeTime); // you can also add this in RifleItem object but its better to be there
         

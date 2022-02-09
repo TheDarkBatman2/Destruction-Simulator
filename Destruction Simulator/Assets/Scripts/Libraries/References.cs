@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class References : MonoBehaviour
 {
+    public static References Instance { get; private set; }
     private Vector3 playerPrevPos;
     private Vector3 playerCurrPos;
-    public static References Instance { get; private set; }
+
     // Player
     public Rigidbody playerRb;
     public Transform playerTransform;
@@ -19,6 +20,8 @@ public class References : MonoBehaviour
     public Camera fpsCam;
     // Item
     public Item blankItem;
+    // Objects
+    public GameObject sphere;
 
     private void Awake() 
     {
