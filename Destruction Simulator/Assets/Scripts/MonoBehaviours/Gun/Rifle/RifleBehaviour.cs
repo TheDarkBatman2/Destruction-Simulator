@@ -11,6 +11,7 @@ public class RifleBehaviour : MonoBehaviour
     public bool reloaded;
     private float nextTimeToFire = 0f;
 
+
     void Awake(){
         reloaded = true;
         clipAmmo = Mathf.Min(rifleItem.clipSize ,totalAmmo);
@@ -52,17 +53,21 @@ public class RifleBehaviour : MonoBehaviour
     {  
         // Find target location
         Ray ray = References.Instance.fpsCam.ViewportPointToRay(new Vector3(0.5f ,0.5f ,0));
+        RaycastHit hit;
+        Vector3 targetPoint = ray.GetPoint(100);
+
+        if (Physics.Raycast(ray, out hit)){
+            targetPoint = hit.point;
+        }
+
         // RaycastHit hit;
         // if (Physics.Raycast(ray, out hit))
-        //     Instantiate(References.Instance.sphere, hit.point, Quaternion.Euler(Vector3.zero));
                     
 
         // We just get static point on ray to make our spread global and not changable
-        Vector3 targetPoint = ray.GetPoint(100);
 
         // calculate direction
         Vector3 directionWithoutSpread = targetPoint - GunTip.position;
-        print(GunTip.position);
         
         // spread
         float x = Random.Range(-rifleItem.bulletSpread ,rifleItem.bulletSpread);
@@ -72,13 +77,13 @@ public class RifleBehaviour : MonoBehaviour
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x ,y ,0); // + player velocity to carry that
 
         // create bullet
-        GameObject currentBullet = Instantiate(rifleItem.bulletPrefab ,GunTip.position ,Quaternion.identity);
+        GameObject currentBullet = Instantiate(rifleItem.bulletPrefab ,GunTip.position ,rifleItem.bulletPrefab.transform.rotation);
         // rotate bullet towards direction
-        currentBullet.transform.forward = directionWithSpread.normalized;
+        currentBullet.transform.up = directionWithSpread.normalized;
 
         // add force
-        currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * rifleItem.bulletSpeed);
-        currentBullet.GetComponent<Rigidbody>().velocity += References.Instance.playerVelocity;
+        currentBullet.GetComponent<Rigidbody>().AddForce(currentBullet.transform.up * rifleItem.bulletSpeed, ForceMode.Impulse);
+        // currentBullet.GetComponent<Rigidbody>().velocity += References.Instance.playerVelocity;
         Destroy(currentBullet ,currentBullet.GetComponent<RifleBulletBehaviour>().rifleBullet.lifeTime); // you can also add this in RifleItem object but its better to be there
         
         // recoil ? check for shotgun

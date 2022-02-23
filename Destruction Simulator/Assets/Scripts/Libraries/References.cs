@@ -16,6 +16,7 @@ public class References : MonoBehaviour
     // Gun
     public Transform gunContainer;
     public Transform gunHolder;
+    public Transform gunCursor;
     // Camera
     public Camera fpsCam;
     // Item
