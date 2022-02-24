@@ -8,7 +8,7 @@ public class BombExplosion : MonoBehaviour
     public float explosionDelay = 2f;
     public LayerMask explodableObjects;
     public float explodeRange = 4f;
-    public float explodeForce = 500f;
+    public float explodeForce = 700f;
     void Start()
     {
         Invoke("Explode" , explosionDelay);
