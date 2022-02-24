@@ -9,11 +9,11 @@ public class GroundTile : MonoBehaviour
     void Start()
     {
         ground_spanwer=GameObject.FindObjectOfType<GroundSpawner>();
-        spawnCrystal();
+        //spawnCrystal();
     }
     void OnTriggerExit(Collider other){
         if(other.name=="Player"){
-            //ground_spanwer.SpawnTile();
+            ground_spanwer.SpawnTile();
             Destroy(gameObject, 5);//edit later
         }
     }

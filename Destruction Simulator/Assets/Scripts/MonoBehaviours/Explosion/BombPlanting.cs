@@ -13,11 +13,11 @@ public class BombPlanting : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Fire1")){
-            throwBall();
+            //throwBall();
         }  
         if (Input.GetButtonDown("Fire2")){
             //BombPlant();
-            Instantiate(CRS,new Vector3(x,5,0), Quaternion.identity );
+            //Instantiate(CRS,new Vector3(x,5,0), Quaternion.identity );
             x+=10;
         }      
     }
