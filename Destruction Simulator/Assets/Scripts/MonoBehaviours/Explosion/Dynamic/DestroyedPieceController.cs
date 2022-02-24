@@ -16,28 +16,33 @@ public class DestroyedPieceController : MonoBehaviour
     private Vector3 _starting_scale;
 
     private bool _configured = false;
-    private bool _connections_found = false;
 
     // Start is called before the first frame update
+    
+
     void Start()
     {
+        
         connected_to = new List<DestroyedPieceController>();
         _starting_pos = transform.position;
         _starting_orientation = transform.rotation;
         _starting_scale = transform.localScale;
 
         transform.localScale *= 1.02f;
-
         _rigidbody = GetComponent<Rigidbody>();
+        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (!_configured)
         {
+            
             var neighbour = collision.gameObject.GetComponent<DestroyedPieceController>();
+
             if (neighbour)
             {
+
                 if(!connected_to.Contains(neighbour))
                     connected_to.Add(neighbour);
             }
@@ -64,7 +69,7 @@ public class DestroyedPieceController : MonoBehaviour
         is_connected = false;
         _rigidbody.isKinematic = false;
         is_dirty = true;
-        _rigidbody.AddExplosionForce(expForce , transform.position, expRange, 2f);
+        _rigidbody.AddExplosionForce(expForce , transform.position, expRange, 1f);
         //VFXController.Instance.spawn_dust_cloud(transform.position);
     }
 
@@ -74,4 +79,5 @@ public class DestroyedPieceController : MonoBehaviour
         _rigidbody.isKinematic = false;
         Destroy(this.gameObject,5);
     }
+    
 }

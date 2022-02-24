@@ -7,14 +7,18 @@ public class BombPlanting : MonoBehaviour
     public LayerMask plantSpots;
     public LayerMask explodableObjects;
     public GameObject throwableObj; 
+    public GameObject CRS;
 
+    int x =0;
     void Update()
     {
         if (Input.GetButtonDown("Fire1")){
             throwBall();
         }  
         if (Input.GetButtonDown("Fire2")){
-            BombPlant();
+            //BombPlant();
+            Instantiate(CRS,new Vector3(x,5,0), Quaternion.identity );
+            x+=10;
         }      
     }
 

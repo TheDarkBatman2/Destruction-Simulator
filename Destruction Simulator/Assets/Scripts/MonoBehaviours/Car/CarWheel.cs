@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarWheel : MonoBehaviour
 {   
-    private float yRotation = 0;
+    //private float yRotation = 0;
     void Update()
     {
         Rigidbody rb = this.GetComponent<Rigidbody>();
