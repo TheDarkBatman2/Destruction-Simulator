@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestructableObjectController : MonoBehaviour
 {
+    [HideInInspector] public bool is_damaged = false;
     public GameObject[] roots = new GameObject[4];
     [HideInInspector] public DestroyedPieceController[] root_dest_pieces = new DestroyedPieceController[4];
 
@@ -34,7 +35,7 @@ public class DestructableObjectController : MonoBehaviour
     private void Update()
     {
         
-        if(DestroyedPieceController.is_damaged)
+        if(is_damaged)
         {
 
             foreach (var destroyed_piece in destroyed_pieces)

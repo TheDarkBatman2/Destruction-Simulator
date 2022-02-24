@@ -8,9 +8,6 @@ public class DestroyedPieceController : MonoBehaviour
     private bool is_dropping = false;
     [HideInInspector] public bool visited = false;
     public List<DestroyedPieceController> connected_to = new List<DestroyedPieceController>();
-
-    public static bool is_damaged = false;
-
     private Rigidbody _rigidbody;
     private Vector3 _starting_pos;
     private Quaternion _starting_orientation;
@@ -69,7 +66,8 @@ public class DestroyedPieceController : MonoBehaviour
     {
         is_connected = false;
         _rigidbody.isKinematic = false;
-        is_damaged = true;
+        DestructableObjectController _dcp = GetComponentInParent( typeof(DestructableObjectController) ) as DestructableObjectController;
+        _dcp.is_damaged = true;
         _rigidbody.AddExplosionForce(expForce , transform.position, expRange, 1f);
         //VFXController.Instance.spawn_dust_cloud(transform.position);
     }
