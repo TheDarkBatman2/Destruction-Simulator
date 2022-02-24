@@ -5,10 +5,11 @@ using UnityEngine;
 public class DestroyedPieceController : MonoBehaviour
 {
     public bool is_connected = true;
+    private bool is_dropping = false;
     [HideInInspector] public bool visited = false;
-    public List<DestroyedPieceController> connected_to;
+    public List<DestroyedPieceController> connected_to = new List<DestroyedPieceController>();
 
-    public static bool is_dirty = false;
+    public static bool is_damaged = false;
 
     private Rigidbody _rigidbody;
     private Vector3 _starting_pos;
@@ -23,13 +24,12 @@ public class DestroyedPieceController : MonoBehaviour
     void Start()
     {
         
-        connected_to = new List<DestroyedPieceController>();
         _starting_pos = transform.position;
         _starting_orientation = transform.rotation;
         _starting_scale = transform.localScale;
 
         transform.localScale *= 1.02f;
-        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = this.GetComponent<Rigidbody>();
         
     }
 
@@ -56,6 +56,7 @@ public class DestroyedPieceController : MonoBehaviour
     public void make_static()
     {
         _configured = true;
+        print("Object is static!");
         _rigidbody.isKinematic = true;
         _rigidbody.useGravity = true;
 
@@ -68,16 +69,21 @@ public class DestroyedPieceController : MonoBehaviour
     {
         is_connected = false;
         _rigidbody.isKinematic = false;
-        is_dirty = true;
+        is_damaged = true;
         _rigidbody.AddExplosionForce(expForce , transform.position, expRange, 1f);
         //VFXController.Instance.spawn_dust_cloud(transform.position);
     }
 
     public void drop()
     {
-        is_connected = false;
-        _rigidbody.isKinematic = false;
-        Destroy(this.gameObject,5);
+        if (!is_dropping){
+            print("Object dropping!");
+            is_connected = false;
+            _rigidbody.isKinematic = false;
+            Destroy(this.gameObject,5);
+            is_dropping = true;
+        }
+        
     }
     
 }

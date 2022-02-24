@@ -34,7 +34,7 @@ public class DestructableObjectController : MonoBehaviour
     private void Update()
     {
         
-        if(DestroyedPieceController.is_dirty)
+        if(DestroyedPieceController.is_damaged)
         {
 
             foreach (var destroyed_piece in destroyed_pieces)
@@ -55,6 +55,7 @@ public class DestructableObjectController : MonoBehaviour
                     piece.drop();
                 }
             }
+
         }
     }
 
