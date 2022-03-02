@@ -10,10 +10,10 @@ public class RifleItem : Item
     public float reloadTime;
     public float fireRate;
     public int clipSize;
-    public float bulletSpeed;
     public float bulletSpread;
     public GameObject bulletPrefab;
     public float recoilForce;
-   
+    public RifleBullet rifleBullet;
+      
 
 }

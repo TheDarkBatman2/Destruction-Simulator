@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecf8dea71d6a364fbb29ebb17fb0229, type: 3}
   m_Name: RifleBullet
   m_EditorClassIdentifier: 
-  damage: 1
-  lifeTime: 5
+  bulletDamage: 0
+  bulletForce: 0
+  shotLine: {fileID: 0}
+  bulletImpact: {fileID: 0}
+  bulletTrail: {fileID: 8937695556065582286, guid: fc6b3beda90745142a634fe61a840c7c, type: 3}

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Crystal
+  - Crystal_Shard
   layers:
   - Default
   - TransparentFX

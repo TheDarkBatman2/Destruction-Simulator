@@ -6,5 +6,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RifleBullet", menuName ="Bullets/Rifle")]
 public class RifleBullet : Bullet
 {
-    
+    // Mechanics here
+    public override void OnImpact()
+    {
+        base.OnImpact();
+        
+    }
 }

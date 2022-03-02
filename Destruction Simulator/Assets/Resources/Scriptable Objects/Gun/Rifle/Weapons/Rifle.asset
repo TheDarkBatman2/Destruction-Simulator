@@ -19,7 +19,7 @@ MonoBehaviour:
   reloadTime: 2
   fireRate: 20
   clipSize: 100
-  bulletSpeed: 100
   bulletSpread: 0
   bulletPrefab: {fileID: 4015730959525617916, guid: 04fad87d6e2d2b14ba5f6fd44f1bbebb, type: 3}
   recoilForce: 0
+  rifleBullet: {fileID: 11400000, guid: b40745f0ebd8777438f388a5e176355c, type: 2}
