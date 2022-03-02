@@ -27,7 +27,8 @@ public class RifleBehaviour : MonoBehaviour
             {
                 nextTimeToFire = Time.time + 1f/rifleItem.fireRate;
                 Shoot();
-                muzzleFlash.Play();
+                // muzzleFlash.Play(); 
+                
                 // Start shooting animation 
 
                 clipAmmo--;
