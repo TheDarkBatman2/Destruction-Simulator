@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+using UnityEngine.UI;
 
 public class HotbarContoller : MonoBehaviour
 {
+    public Color defaultSlotColor;
+    public Color activeSlotColor;
     InventoryController inventoryController;
     public int hotbarSlotSize => transform.childCount;
     public int activeSlot = 0;
@@ -20,21 +22,33 @@ public class HotbarContoller : MonoBehaviour
     private void Update() {
         // Check for button press 1-9
         for (int i = 0; i < hotbarKeys.Length; i++){
+            
             if (Input.GetKeyDown(hotbarKeys[i]))
             {
-                // hight light here
-
+                
                 // disable previous object
-                DisableSlot(activeSlot);
+                DisableItemInSlot(activeSlot);
+                SlotColorDisabled(activeSlot); // prev active slot
                 activeSlot = i;
+                SlotColorEnabled(activeSlot); // cur active slot
+
+                break;
+
                 // enable current object
                 // it will be in update inventory method
             }
-            inventoryController.UpdateInventory();
         }
+        inventoryController.UpdateActiveSlot(); // it checks stuff and enables item in slot if its true
     }
 
-    public void ActivateSlot(int indx){
+    // Changing color of slot is just visual and basically does nothing xD
+    public void SlotColorDisabled(int indx){
+        hotbarSlots[indx].gameObject.GetComponent<Image>().color = defaultSlotColor;  // Changes color of slot
+    }
+    public void SlotColorEnabled(int indx){
+        hotbarSlots[indx].gameObject.GetComponent<Image>().color = activeSlotColor; // Change color of slot
+    }
+    public void ActivateItemInSlot(int indx){
         GameObject obj = hotbarSlots[indx].itemObject;
         if (obj != null){
             obj.SetActive(true);
@@ -42,7 +56,7 @@ public class HotbarContoller : MonoBehaviour
         }
     }
 
-    private void DisableSlot(int indx){
+    private void DisableItemInSlot(int indx){
         GameObject obj = hotbarSlots[indx].itemObject;
         if (obj != null){
             obj.transform.SetParent(null); // to make sure if i fix scale it wont bug anything
@@ -50,7 +64,7 @@ public class HotbarContoller : MonoBehaviour
         }
     }
 
-    private void FixScale_Parent(GameObject obj){ // Scale
+    private void FixScale_Parent(GameObject obj){ // Fixes scale of object
         // for most cases Indx is active slot , if it caused bug fix it :)
         References.Instance.gunContainer.transform.localScale = obj.transform.localScale;
         obj.transform.SetParent(References.Instance.gunContainer);

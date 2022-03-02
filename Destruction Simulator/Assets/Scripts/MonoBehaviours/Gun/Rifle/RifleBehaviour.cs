@@ -64,7 +64,8 @@ public class RifleBehaviour : MonoBehaviour
         RaycastHit hit;
         Vector3 targetPoint = ray.GetPoint(100);
 
-        if (Physics.Raycast(ray, out hit)){
+        // Shoots raycast
+        if (Physics.Raycast(ray, out hit, References.Instance.shootableLayers)){
             targetPoint = hit.point;
         }
 

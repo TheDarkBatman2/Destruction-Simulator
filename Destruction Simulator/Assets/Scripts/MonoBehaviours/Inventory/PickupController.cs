@@ -7,7 +7,7 @@ public class PickupController : MonoBehaviour
     public Item item; // just stores it
     
     private void Awake() {
-        if (gameObject.GetComponent<Rigidbody>() == null){ // just to make sure
+        if (gameObject.GetComponent<Rigidbody>() == null){ // just to make sure all items have rigid body
             gameObject.AddComponent<Rigidbody>();
         }
         DisableAllComponents();
@@ -30,6 +30,7 @@ public class PickupController : MonoBehaviour
 
     public void OnPickup(){
         Destroy(gameObject.GetComponent<Rigidbody>());
+        GetComponent<Collider>().enabled = false; // so it doesnt push other objects 
         EnableAllComponents();
 
         Destroy(this);// to make sure you cant pick it up again xD
@@ -37,10 +38,10 @@ public class PickupController : MonoBehaviour
 
     public void OnDrop(){
         DisableAllComponents();
+        GetComponent<Collider>().enabled = true; // so it doesnt push other objects 
         Rigidbody rb = this.GetComponent<Rigidbody>();
-        rb.AddForce(this.transform.forward * 10, ForceMode.Impulse);
-        rb.AddForce(this.transform.up * 10, ForceMode.Impulse);
-        rb.velocity += References.Instance.playerVelocity;
+        rb.AddForce(References.Instance.playerHeadTransform.forward * 20, ForceMode.Impulse);
+        // rb.velocity += References.Instance.playerVelocity;
 
         //Add random rotation
         float random = Random.Range(-2f, 2f);

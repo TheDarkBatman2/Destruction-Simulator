@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RifleBullet
   m_EditorClassIdentifier: 
   bulletDamage: 0
-  bulletForce: 0
+  bulletForce: 10
   shotLine: {fileID: 0}
   bulletImpact: {fileID: 0}
   bulletTrail: {fileID: 8937695556065582286, guid: fc6b3beda90745142a634fe61a840c7c, type: 3}

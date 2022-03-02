@@ -19,15 +19,20 @@ public class InventoryController : MonoBehaviour
         }
     }
     
-    public void AddItems(){
-
+    public void AddItem(PickupController itemPC){
+        foreach (ItemSlot slot in hotbarController.hotbarSlots){ // check for space
+                    if (slot.GetItem() == blankItem){
+                        slot.SetItem(itemPC.item ,itemPC.gameObject); // adds item here
+                        break;
+                    }          
+        }
     }
-    public void UpdateInventory(){
+    public void UpdateActiveSlot(){
         // show current activate slot
         ItemSlot activeSlot = hotbarController.hotbarSlots[hotbarController.activeSlot];
         if (activeSlot.GetItem() != blankItem){ // For sure every item has prefab
             if (activeSlot.itemObject.activeSelf == false){ // to avoid laggy stuff , so it will check if its already activated or not
-                hotbarController.ActivateSlot(hotbarController.activeSlot);
+                hotbarController.ActivateItemInSlot(hotbarController.activeSlot);
             }
         }
         
@@ -35,18 +40,12 @@ public class InventoryController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")){
-            // will get current item
-            // Fire code here
-            Fire(hotbarController.hotbarSlots[hotbarController.activeSlot]);
-        } 
-
         // Pickup
         if (Input.GetKeyDown(KeyCode.E)){
             // if it has valid state it will pickup item in range
-            CheckItem();
+            CheckAndAddItem();
         }
-
+        // Drop
         if (Input.GetKeyDown(KeyCode.Q)){
             if (CheckSlot()){
                 DropItem();
@@ -54,21 +53,15 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    void CheckItem(){
+    void CheckAndAddItem(){
         Ray ray = References.Instance.fpsCam.ViewportPointToRay(new Vector3(0.5f ,0.5f ,0));
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit ,pickupRange)){
             PickupController temp = hit.transform.gameObject.GetComponent<PickupController>();
             if (temp != null){
-                foreach (ItemSlot slot in hotbarController.hotbarSlots){ // check for space
-                    if (slot.GetItem() == blankItem){
-                        PickupItem(temp);
-                        slot.SetItem(temp.item ,temp.gameObject);
-                        break;
-                    }
-                    
-                }
+                PickupItem(temp);
+                AddItem(temp);
             }
         }
     }
@@ -93,27 +86,5 @@ public class InventoryController : MonoBehaviour
         droppedItemPickupController.item = currSlot.GetItem();
         droppedItemPickupController.OnDrop();
         currSlot.EmptySlot();
-    }
-
-
-
-    public void Fire(ItemSlot slot){
-        Item item = slot.GetItem();
-        if (item != null){ // it wont happen that slot doesnt have set item , but still :)
-            if (slot.itemAmount >= 1){
-                slot.DecreaseItemAmount(1);
-
-                // if (item.itemType == ExplosiveItem.ExplosionType.Missile){
-                //     // Missile
-                // }
-                // else if (item.itemType == ExplosiveItem.ExplosionType.TimeBomb){
-                //     // TimeBomb
-                // }
-                // else if (item.itemType == ExplosiveItem.ExplosionType.Cannon){
-                //     // Cannon
-                // }
-            }
-        }
-        
     }
 }
