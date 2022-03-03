@@ -19,6 +19,10 @@ public class HotbarContoller : MonoBehaviour
         inventoryController = this.GetComponent<InventoryController>();
     }
 
+    public void Start(){
+        SlotColorEnabled(0);
+    }
+
     private void Update() {
         // Check for button press 1-9
         for (int i = 0; i < hotbarKeys.Length; i++){
