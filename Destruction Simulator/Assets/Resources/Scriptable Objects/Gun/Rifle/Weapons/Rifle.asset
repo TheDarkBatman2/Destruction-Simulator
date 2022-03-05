@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Defulat Item
   itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  itemPanelIcon: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
   description: 
   originalPrefab: {fileID: 6203985196886591649, guid: 2fd640dcd28b0d14da503ed88a3abbca, type: 3}
   reloadTime: 2
   fireRate: 20
   clipSize: 100
   bulletSpread: 0
-  bulletPrefab: {fileID: 4015730959525617916, guid: 04fad87d6e2d2b14ba5f6fd44f1bbebb, type: 3}
   recoilForce: 0
   rifleBullet: {fileID: 11400000, guid: b40745f0ebd8777438f388a5e176355c, type: 2}

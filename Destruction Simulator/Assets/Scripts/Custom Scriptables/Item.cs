@@ -10,6 +10,7 @@ public class Item : ScriptableObject
     [Header("Item Stats")]
     public string itemName = "Defulat Item";
     public Sprite itemIcon = null;
+    public Sprite itemPanelIcon = null;
     // [SerializeField] private GameObject itemObject; // because it is set in PickupController and also we dont want data to reset on drop/pickup so we create local one
     [TextArea] public string description = "";
 

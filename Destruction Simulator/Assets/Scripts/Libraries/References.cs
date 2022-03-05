@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class References : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class References : MonoBehaviour
     public Transform gunHolder;
     public Transform gunCursor;
     public LayerMask shootableLayers;
+    public TMP_Text itemPanelBullets;
+    public Image itemPanelTexture;
     // Camera
     public Camera fpsCam;
     // Item

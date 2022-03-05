@@ -55,6 +55,7 @@ public class HotbarContoller : MonoBehaviour
     public void ActivateItemInSlot(int indx){
         GameObject obj = hotbarSlots[indx].itemObject;
         if (obj != null){
+            References.Instance.itemPanelTexture.sprite = hotbarSlots[indx].GetItem().itemPanelIcon;  // Sets the texture of item panel
             obj.SetActive(true);
             FixScale_Parent(obj);
         }
@@ -63,6 +64,7 @@ public class HotbarContoller : MonoBehaviour
     private void DisableItemInSlot(int indx){
         GameObject obj = hotbarSlots[indx].itemObject;
         if (obj != null){
+            References.Instance.itemPanelTexture.sprite = null;  // Sets the texture of item panel
             obj.transform.SetParent(null); // to make sure if i fix scale it wont bug anything
             obj.SetActive(false);
         }
