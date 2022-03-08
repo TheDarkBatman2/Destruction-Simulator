@@ -4637,7 +4637,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 20
-  positionOffset: {x: 0, y: 0.63, z: 0}
+  xOffset: -0.1
+  zOffset: -0.5
+  yOffset: -0.5
 --- !u!1001 &1445107443
 PrefabInstance:
   m_ObjectHideFlags: 0

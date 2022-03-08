@@ -2,11 +2,13 @@ using UnityEngine;
 public class RotateGun : MonoBehaviour {
 
     public float rotationSpeed = 5f;
-    public Vector3 positionOffset = new Vector3(0 , 0.63f ,0);
+    public float xOffset = 1f;
+    public float zOffset = 1f;
+    public float yOffset = 1f;
 
     void Update() {
         transform.rotation = Quaternion.Lerp(transform.rotation, References.Instance.playerHeadTransform.rotation, Time.deltaTime * rotationSpeed);
-        transform.position = References.Instance.playerTransform.position + positionOffset;
+        transform.position = References.Instance.playerHeadTransform.position + xOffset * References.Instance.playerHeadTransform.right + zOffset * References.Instance.playerHeadTransform.forward + yOffset * References.Instance.playerHeadTransform.up;
     }
 
 }
