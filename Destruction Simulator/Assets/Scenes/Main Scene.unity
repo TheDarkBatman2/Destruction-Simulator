@@ -4983,7 +4983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityScale: 0
-  movementSpeed: 1000
+  movementSpeed: 15
   groundCheck: {fileID: 1450095317}
   groundDistance: 0.1
   groundMask:
