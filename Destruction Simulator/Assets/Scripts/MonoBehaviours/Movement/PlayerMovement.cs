@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float gravityScale;
     public float movementSpeed = 0.5f;
     private Rigidbody rb;
     // Start is called before the first frame update
@@ -35,11 +36,13 @@ public class PlayerMovement : MonoBehaviour
         // movement system
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+        Vector3 moveDirectiony = new Vector3(0f, rb.velocity.y, 0) + Physics.gravity * gravityScale;
 
         Vector3 move = (transform.right * x + transform.forward * z) * movementSpeed * Time.deltaTime ;
 
         // rb.MovePosition(transform.position + move);
         
-        rb.MovePosition(transform.position + move);
+        // rb.MovePosition(transform.position + move);
+        rb.velocity = move + moveDirectiony;
     }
 }
