@@ -33,6 +33,7 @@ public class RifleBullet : Bullet
         Vector3 startPos = trail.transform.position;
         
         while (time < 1){
+            Debug.Log(time);
             trail.transform.position = Vector3.Lerp(startPos, endPos, time);
             time += (float) ( Time.deltaTime / 0.1 );
 

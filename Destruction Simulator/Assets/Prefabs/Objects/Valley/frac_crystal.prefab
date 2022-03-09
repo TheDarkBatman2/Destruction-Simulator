@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &251413706360968044
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &258007530134655972
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &543117992291999831
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &1076044781179565684
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &1103963324378861217
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &1175008536934430767
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &1221236657695301749
@@ -781,7 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &1252922951783258194
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &1639198971738460621
@@ -977,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &1802755252856867310
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &1997667240144758854
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &2758000623156204622
@@ -1363,7 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &2909034428918408634
@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &3499527909975478157
@@ -1559,7 +1559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &3824498721798449821
@@ -1657,7 +1657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &3902232486803076648
@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &4080981630752483270
@@ -1853,7 +1853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &4123976225300587394
@@ -1951,7 +1951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &4217595274431345779
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &4622756060087972875
@@ -2147,7 +2147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &4826500674175783945
@@ -2245,7 +2245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &4839962740240273901
@@ -2343,7 +2343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &4987616811625684864
@@ -2441,7 +2441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &5428089876349075933
@@ -2539,7 +2539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &6186232233299957727
@@ -2637,7 +2637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &6450447049203544072
@@ -2735,7 +2735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &6454848876806409856
@@ -2833,7 +2833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &6947712487421130860
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &7169940034729102366
@@ -3029,7 +3029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &7823146689150216794
@@ -3127,7 +3127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &7942435446997779837
@@ -3225,7 +3225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &7961550324917295872
@@ -3323,7 +3323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &8095929565061164509
@@ -3421,7 +3421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &8513368049465184874
@@ -3519,7 +3519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &8741115977535209570
@@ -3617,7 +3617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &8887083116935889494
@@ -3715,7 +3715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250
 --- !u!1 &9066864859448203679
@@ -3813,6 +3813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f31492017a9ce843b419ea193fbd415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colVelocityLimit: 25
+  colVelocityLimit: 5
   explodeRange: 2
   explodeForce: 250

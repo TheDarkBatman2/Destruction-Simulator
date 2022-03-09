@@ -15,7 +15,7 @@ public abstract class Bullet : ScriptableObject
     public virtual void OnImpact(RaycastHit hit){
         // Put hit effects here
     }
-
+    
     public virtual IEnumerator SpawnTrail(TrailRenderer trail, Vector3 endPos, RaycastHit hit){
         // Put trail code here
         yield return null; // Its just to make sure it returns something

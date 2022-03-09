@@ -42,4 +42,8 @@ public class References : MonoBehaviour
         playerCurrPos = playerTransform.position;
     }
 
+    public void StartSpawningGunTrail(Bullet bulletScript, TrailRenderer trail, Vector3 endPos, RaycastHit hit){
+        StartCoroutine(bulletScript.SpawnTrail(trail, endPos, hit));
+    }
+
 }
