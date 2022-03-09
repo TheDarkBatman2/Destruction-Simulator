@@ -39,6 +39,7 @@ public class PickupController : MonoBehaviour
     public void OnDrop(){
         DisableAllComponents();
         References.Instance.itemPanelTexture.sprite = null; // Sets the texture of item panel
+        References.Instance.itemPanelCounts.text = "---"; // Sets the panel counts to ---
         GetComponent<Collider>().enabled = true; // so it doesnt push other objects 
         Rigidbody rb = this.GetComponent<Rigidbody>();
         rb.AddForce(References.Instance.playerHeadTransform.forward * 20, ForceMode.Impulse);

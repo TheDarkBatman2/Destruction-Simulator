@@ -20,7 +20,7 @@ public class References : MonoBehaviour
     public Transform gunHolder;
     public Transform gunCursor;
     public LayerMask shootableLayers;
-    public TMP_Text itemPanelBullets;
+    public TMP_Text itemPanelCounts;
     public Image itemPanelTexture;
     // Camera
     public Camera fpsCam;

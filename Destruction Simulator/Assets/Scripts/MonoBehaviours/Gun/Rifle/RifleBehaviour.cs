@@ -21,6 +21,8 @@ public class RifleBehaviour : MonoBehaviour
     }
     void Update()
     {
+        UpdateItemPanel();
+
         if (Input.GetMouseButton(0) && Time.time >= nextTimeToFire)
         {
             if (clipAmmo > 0 && reloaded) // idk if reloaded is necesary
@@ -55,6 +57,9 @@ public class RifleBehaviour : MonoBehaviour
         reloaded = true;
     }
     
+    public void UpdateItemPanel(){
+        References.Instance.itemPanelCounts.text = clipAmmo.ToString() + "/" + totalAmmo.ToString();
+    }
 
     public void Shoot()
     {  

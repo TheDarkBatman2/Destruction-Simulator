@@ -1250,6 +1250,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 977116979}
     - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
+      propertyPath: itemPanelCounts
+      value: 
+      objectReference: {fileID: 1872119521}
+    - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1572783298}
@@ -5690,7 +5694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2/2
+  m_text: ---
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
