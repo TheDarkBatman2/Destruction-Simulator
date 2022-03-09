@@ -8,8 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public float gravityScale;
     public float movementSpeed = 0.5f;
     private Rigidbody rb;
-    // Start is called before the first frame update
-
     public Transform groundCheck;
     public float groundDistance = 0.4f; // max distance from ground after that it will say you are grounded
     public LayerMask groundMask; // layers it can have collision with it
@@ -19,8 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
 
