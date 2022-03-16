@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 3356.2256, g: 3991, b: 4718.5234, a: 1}
+  m_IndirectSpecularColor: {r: 3356.0542, g: 3991.0684, b: 4718.3555, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -841,7 +841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd8fb6b97533834e91449f26e77480c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 3775599564415363990, guid: c1f947d2dc76f174599261c8885d89d9, type: 3}
+  tilesList: []
+  tilesListArray: []
 --- !u!4 &324581531
 Transform:
   m_ObjectHideFlags: 0
@@ -1271,7 +1272,7 @@ PrefabInstance:
       objectReference: {fileID: 1664560768}
     - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: shootableLayers.m_Bits
-      value: 2147483647
+      value: 1847
       objectReference: {fileID: 0}
     - target: {fileID: 6147134781665731282, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: m_RootOrder

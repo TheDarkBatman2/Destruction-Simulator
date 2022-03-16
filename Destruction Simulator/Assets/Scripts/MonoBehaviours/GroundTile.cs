@@ -14,7 +14,7 @@ public class GroundTile : MonoBehaviour
     void OnTriggerExit(Collider other){
         if(other.name=="Player"){
             ground_spanwer.SpawnTile();
-            Destroy(gameObject, 5);//edit later
+            Destroy(gameObject,5);//edit later
         }
     }
 

@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class GroundSpawner : MonoBehaviour
 {
-    public GameObject groundTile;
+    public List<GameObject> tilesList;
+      
+    public GameObject[] tilesListArray;
+    GameObject groundTile;
     Vector3 NextSpawnerPoint;
     public void SpawnTile(){
+        groundTile = tilesList [Random.Range (0, tilesList.Count)];
+        print(tilesList.Count);
         GameObject temp = Instantiate(groundTile, NextSpawnerPoint, Quaternion.identity);
         NextSpawnerPoint=temp.transform.GetChild(1).transform.position;
  }
     void Start()
     {
-        for(int i=0; i <10; i++){
+        tilesListArray = Resources.LoadAll<GameObject>("Valleys");
+        tilesList = tilesListArray.ToList();
+
+        for(int i=0; i <2; i++){
             SpawnTile();
         }
 

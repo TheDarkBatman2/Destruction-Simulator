@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyOnFroce : MonoBehaviour
 {
-    public float colVelocityLimit = 25f;
+    public float colVelocityLimit =5f;
     public float explodeRange = 2f;
     public float explodeForce = 250f;
     void OnCollisionEnter(Collision collision)
