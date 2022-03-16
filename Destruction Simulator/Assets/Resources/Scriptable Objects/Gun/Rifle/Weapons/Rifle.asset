@@ -18,7 +18,7 @@ MonoBehaviour:
   description: 
   originalPrefab: {fileID: 6203985196886591649, guid: 2fd640dcd28b0d14da503ed88a3abbca, type: 3}
   reloadTime: 2
-  fireRate: 20
+  fireRate: 10
   clipSize: 100
   bulletSpread: 0
   recoilForce: 0

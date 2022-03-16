@@ -16,7 +16,14 @@ public class RifleBullet : Bullet
             if (hit.transform.tag == "Crystal_Shard"){
                 DestroyedPieceController _dpc = hit.transform.GetComponent<DestroyedPieceController>();
                 if (_dpc){
-                    _dpc.cause_damage(bulletForce, 10);
+                    Collider[] collidersInSphere = Physics.OverlapSphere(_dpc.gameObject.transform.position, bulletForceDistance);
+                    foreach (var colliderInSphere in collidersInSphere)
+                    {
+                        DestroyedPieceController dpcInSphere = colliderInSphere.GetComponent<DestroyedPieceController>();
+                        if (dpcInSphere){
+                            dpcInSphere.cause_damage(5, 100);
+                        }
+                    }
                 }
             }
             if (hit.rigidbody != null){

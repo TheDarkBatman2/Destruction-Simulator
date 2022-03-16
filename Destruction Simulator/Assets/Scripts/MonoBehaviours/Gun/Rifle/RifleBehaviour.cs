@@ -76,8 +76,8 @@ public class RifleBehaviour : MonoBehaviour
 
         // Trail effect
         TrailRenderer bulletTrail = Instantiate(rifleItem.rifleBullet.bulletTrail, GunTip.position, Quaternion.identity);
-        References.Instance.StartSpawningGunTrail(rifleItem.rifleBullet, bulletTrail, targetPoint, hit); // Had to use global script since it wouldnt run when disabled
-
+        References.Instance.StartSpawningGunTrail(rifleItem.rifleBullet, bulletTrail, ray.GetPoint(100), hit); // Had to use global script since it wouldnt run when disabled
+        // ray.GetPoint(100) -> constant point
 
         // On impact
         rifleItem.rifleBullet.OnImpact(hit);

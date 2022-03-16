@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class DestroyOnFroce : MonoBehaviour
 {
-    public float colVelocityLimit =5f;
-    public float explodeRange = 2f;
-    public float explodeForce = 250f;
-    void OnCollisionEnter(Collision collision)
-    {
-        Vector3 velocity = collision.relativeVelocity;
+    // private float colVelocityLimit = 20f;
+    // private float explodeRange = 5f;
+    // private float explodeForce = 250f;
+    // void OnCollisionEnter(Collision collision)
+    // {
+    //     Vector3 velocity = collision.relativeVelocity;
 
-        if (velocity.magnitude > colVelocityLimit)
-        {
-            this.GetComponent<DestroyedPieceController>().cause_damage(explodeForce, explodeRange);
+    //     if (velocity.magnitude > colVelocityLimit)
+    //     {
+    //         this.GetComponent<DestroyedPieceController>().cause_damage(explodeForce, explodeRange);
 
-            Destroy(this.gameObject,5);
-        }
-    }
+    //         Destroy(this.gameObject,5);
+    //     }
+    // }
 }

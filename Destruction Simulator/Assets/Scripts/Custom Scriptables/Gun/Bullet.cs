@@ -8,6 +8,7 @@ public abstract class Bullet : ScriptableObject
 {
     public float bulletDamage;
     public float bulletForce;
+    public float bulletForceDistance = 0.90f;
     public GameObject shotLine;
     public ParticleSystem bulletImpact;
     public TrailRenderer bulletTrail;
