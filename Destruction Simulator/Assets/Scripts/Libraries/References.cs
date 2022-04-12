@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using TMPro;
 
 public class References : MonoBehaviour
@@ -9,7 +10,6 @@ public class References : MonoBehaviour
     public static References Instance { get; private set; }
     private Vector3 playerPrevPos;
     private Vector3 playerCurrPos;
-
     // Player
     public Rigidbody playerRb;
     public Transform playerTransform;
@@ -28,7 +28,8 @@ public class References : MonoBehaviour
     public Item blankItem;
     // Objects
     public GameObject sphere;
-
+    // Navmesh
+    public NavMeshSurface navMesh;
     private void Awake() 
     {
         playerPrevPos = playerTransform.position;

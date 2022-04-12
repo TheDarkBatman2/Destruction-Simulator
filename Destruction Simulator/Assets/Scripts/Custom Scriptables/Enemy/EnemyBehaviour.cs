@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     private float hp;
     private float damage;
     private TMP_Text hpBar;
+    public NavMeshAgent thisAgent;
     
     // Initilize
 
@@ -16,6 +18,7 @@ public class EnemyBehaviour : MonoBehaviour
         hpBar=  gameObject.GetComponentInChildren<TMP_Text>();
         hp = enemyStats.enemyHp;
         damage = enemyStats.enemyDamage;
+        thisAgent = gameObject.GetComponent<NavMeshAgent>();
         UpdateHpBar();
     }
 
@@ -39,7 +42,11 @@ public class EnemyBehaviour : MonoBehaviour
     }
 
     public virtual void Move(){
-        // Move here
+        thisAgent.SetDestination(References.Instance.playerTransform.position);
+    }
+
+    private void Update() {
+        Move();
     }
     
 }

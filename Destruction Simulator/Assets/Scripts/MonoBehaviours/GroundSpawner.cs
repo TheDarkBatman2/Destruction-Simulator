@@ -14,6 +14,9 @@ public class GroundSpawner : MonoBehaviour
         print(tilesList.Count);
         GameObject temp = Instantiate(groundTile, NextSpawnerPoint, Quaternion.identity);
         NextSpawnerPoint=temp.transform.GetChild(1).transform.position;
+
+        // Update navmesh
+        References.Instance.navMesh.BuildNavMesh();
  }
     void Start()
     {
