@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1417265511712075985}
   - component: {fileID: 1417265511712075996}
   - component: {fileID: 4062868612809227074}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Crystof
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1417265511712075990}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 0.75
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 1417265512194089022}
   - component: {fileID: 1417265512194089016}
   - component: {fileID: 1417265512194089017}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: hpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

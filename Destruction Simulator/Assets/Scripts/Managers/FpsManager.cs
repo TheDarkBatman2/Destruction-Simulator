@@ -8,7 +8,7 @@ public class FpsManager : MonoBehaviour
         // if you want it to also affect the game aswell comment # parts
         #if UNITY_EDITOR
         QualitySettings.vSyncCount = 0;  // VSync must be disabled
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 144;
         #endif
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PickupController : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class PickupController : MonoBehaviour
         if (gameObject.GetComponent<Rigidbody>() == null){ // just to make sure all items have rigid body
             gameObject.AddComponent<Rigidbody>();
         }
+        if (gameObject.GetComponent<NavMeshObstacle>() == null){
+            gameObject.AddComponent<NavMeshObstacle>();
+        }
         DisableAllComponents();
+        
     }
 
     private void DisableAllComponents(){

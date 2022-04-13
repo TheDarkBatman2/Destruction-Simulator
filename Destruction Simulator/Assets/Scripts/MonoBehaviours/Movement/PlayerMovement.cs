@@ -18,9 +18,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
     
-    void Update()
-    {
-
+    void Update(){
         // jump system
         isGrounded = Physics.Raycast(groundCheck.position ,Vector3.down ,groundDistance ,groundMask);
         
@@ -30,11 +28,15 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
 
+    }
+    void FixedUpdate()
+    {
+
         // movement system
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = (transform.right * x + transform.forward * z) * movementSpeed * Time.deltaTime ;
+        Vector3 move = (transform.right * x + transform.forward * z) * movementSpeed;
         
         rb.MovePosition(transform.position + move);
     }

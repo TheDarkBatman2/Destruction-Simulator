@@ -29,6 +29,12 @@ public class RifleBullet : Bullet
             if (hit.rigidbody != null){
                 hit.rigidbody.AddForce (-hit.normal * bulletForce, ForceMode.Impulse);
             }
+            if (hit.transform.tag == "Enemy"){
+                CrystofEnemyBehaviour _ceb = hit.transform.GetComponent<CrystofEnemyBehaviour>();
+                if (_ceb){
+                    _ceb.Damage(bulletDamage);
+                }
+            }
         }
         
     }
