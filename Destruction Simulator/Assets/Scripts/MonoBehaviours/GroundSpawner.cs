@@ -11,7 +11,6 @@ public class GroundSpawner : MonoBehaviour
     Vector3 NextSpawnerPoint;
     public void SpawnTile(){
         groundTile = tilesList [Random.Range (0, tilesList.Count)];
-        print(tilesList.Count);
         GameObject temp = Instantiate(groundTile, NextSpawnerPoint, Quaternion.identity);
         NextSpawnerPoint=temp.transform.GetChild(1).transform.position;
 

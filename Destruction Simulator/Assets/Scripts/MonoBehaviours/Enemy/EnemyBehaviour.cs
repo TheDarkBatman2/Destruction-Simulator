@@ -48,5 +48,15 @@ public class EnemyBehaviour : MonoBehaviour
     private void Update() {
         Move();
     }
+
+    void OnCollisionEnter(Collision col)
+    {
+        float force = col.impulse.magnitude;
+        if(col.gameObject.tag=="Crystal_Shard"){
+            // if (velocity.magnitude > 0.1){
+            Damage(Mathf.Round(force * 100f) / 100f); // * crystal type damage
+            // }
+        }
+    }
     
 }

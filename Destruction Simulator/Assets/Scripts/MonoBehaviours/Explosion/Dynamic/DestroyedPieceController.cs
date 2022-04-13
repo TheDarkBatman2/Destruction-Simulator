@@ -53,7 +53,6 @@ public class DestroyedPieceController : MonoBehaviour
     public void make_static()
     {
         _configured = true;
-        print("Object is static!");
         _rigidbody.isKinematic = true;
         _rigidbody.useGravity = true;
 
@@ -75,7 +74,6 @@ public class DestroyedPieceController : MonoBehaviour
     public void drop()
     {
         if (!is_dropping){
-            print("Object dropping!");
             is_connected = false;
             _rigidbody.isKinematic = false;
             Destroy(this.gameObject,5);

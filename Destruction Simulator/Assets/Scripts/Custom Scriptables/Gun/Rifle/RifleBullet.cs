@@ -26,14 +26,16 @@ public class RifleBullet : Bullet
                     }
                 }
             }
+            if (hit.transform.tag == "Enemy"){
+                if (hit.transform){
+                    CrystofEnemyBehaviour _ceb = hit.transform.GetComponent<CrystofEnemyBehaviour>();
+                    if (_ceb){
+                        _ceb.Damage(bulletDamage);
+                    }
+                }
+            }
             if (hit.rigidbody != null){
                 hit.rigidbody.AddForce (-hit.normal * bulletForce, ForceMode.Impulse);
-            }
-            if (hit.transform.tag == "Enemy"){
-                CrystofEnemyBehaviour _ceb = hit.transform.GetComponent<CrystofEnemyBehaviour>();
-                if (_ceb){
-                    _ceb.Damage(bulletDamage);
-                }
             }
         }
         
@@ -46,7 +48,6 @@ public class RifleBullet : Bullet
         Vector3 startPos = trail.transform.position;
         
         while (time < 1){
-            Debug.Log(time);
             trail.transform.position = Vector3.Lerp(startPos, endPos, time);
             time += (float) ( Time.deltaTime / 0.1 );
 

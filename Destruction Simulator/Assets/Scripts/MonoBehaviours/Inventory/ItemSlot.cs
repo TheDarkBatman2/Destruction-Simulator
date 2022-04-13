@@ -41,7 +41,6 @@ public class ItemSlot : MonoBehaviour
 
     public void SetItem(Item newItem ,GameObject newItemObject = null ,int amount = 0)
     {
-        // print(newItem.itemIcon);
         item = newItem;
         icon = newItem.itemIcon;
         itemAmount = amount;
