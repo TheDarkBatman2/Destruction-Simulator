@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d66f1cfd71d51344b5b9cced41a7ace, type: 3}
+  m_Name: Level1 Enemies
+  m_EditorClassIdentifier: 
+  wavesSetup:
+  - waveName: Alpha
+    enemies:
+    - prefab: {fileID: 1417265511712075990, guid: 425024f32ddda114da7a999ba970c82a, type: 3}
+      count: 10
+      spawnRate: 1
+      spawnDelay: 3
