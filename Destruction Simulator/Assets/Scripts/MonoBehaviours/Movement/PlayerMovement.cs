@@ -31,13 +31,23 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-
         // movement system
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = (transform.right * x + transform.forward * z) * movementSpeed;
         
-        rb.MovePosition(transform.position + move);
+        rb.AddForce(new Vector3(move.x-rb.velocity.x, 0 ,move.z-rb.velocity.z), ForceMode.VelocityChange);
     }
+
+    // private void OnCollisionEnter(Collision other) {
+    //     if (References.Instance.wallsLayer == (References.Instance.wallsLayer | (1 << other.gameObject.layer))){
+    //         allowedToMove = false;
+    //     }
+    // }
+    // private void OnCollisionExit(Collision other) {
+    //     if (References.Instance.wallsLayer == (References.Instance.wallsLayer | (1 << other.gameObject.layer))){
+    //         allowedToMove = true;
+    //     }
+    // }
 }

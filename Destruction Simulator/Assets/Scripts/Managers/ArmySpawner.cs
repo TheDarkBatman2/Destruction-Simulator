@@ -26,7 +26,6 @@ public class ArmySpawner : MonoBehaviour
             // Get enemy behaviour using its parent class
             EnemyBehaviour _eb = instEnemy.GetComponent<EnemyBehaviour>();
             if (_eb){
-                print(_eb.gameObject.name);
                 _eb.targetTransform = _tr;
             }
 

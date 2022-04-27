@@ -15,6 +15,11 @@ public class References : MonoBehaviour
     public Transform playerTransform;
     public Transform playerHeadTransform;
     public Vector3 playerVelocity;
+    public Transform truckTransform;
+    private Vector3 prevTruckPos;
+    private Vector3 curTruckPos;
+    public Vector3 truckVelocity;
+    // public LayerMask wallsLayer;
     // Gun
     public Transform gunContainer;
     public Transform gunHolder;
@@ -37,6 +42,8 @@ public class References : MonoBehaviour
     {
         playerPrevPos = playerTransform.position;
         playerCurrPos = playerTransform.position;
+        prevTruckPos = truckTransform.position;
+        curTruckPos = truckTransform.position;
         Instance = this;
     }
 
@@ -44,6 +51,10 @@ public class References : MonoBehaviour
         playerVelocity = (playerCurrPos - playerPrevPos) / Time.deltaTime;
         playerPrevPos = playerCurrPos;
         playerCurrPos = playerTransform.position;
+
+        truckVelocity = (curTruckPos - prevTruckPos) / Time.deltaTime;
+        prevTruckPos = curTruckPos;
+        curTruckPos = truckTransform.position;
     }
 
     public void StartSpawningGunTrail(Bullet bulletScript, TrailRenderer trail, Vector3 endPos, RaycastHit hit){
