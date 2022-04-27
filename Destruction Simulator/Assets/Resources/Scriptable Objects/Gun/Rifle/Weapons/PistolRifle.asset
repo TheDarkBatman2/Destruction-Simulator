@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a39be2898c9020d419f4cf85c4137640, type: 3}
-  m_Name: Rifle
+  m_Name: PistolRifle
   m_EditorClassIdentifier: 
   itemName: Defulat Item
-  itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  itemPanelIcon: {fileID: 21300000, guid: 3905558a00e6f1b40935800d1f346dff, type: 3}
+  itemIcon: {fileID: 21300000, guid: ca67867d0fd561941b3b4733f01cd823, type: 3}
+  itemPanelIcon: {fileID: 21300000, guid: e15e3a8a769c3a14c875fd33cee8ddfd, type: 3}
   description: 
-  originalPrefab: {fileID: 6203985196886591649, guid: 2fd640dcd28b0d14da503ed88a3abbca, type: 3}
+  originalPrefab: {fileID: 6992263821234891095, guid: eb8c2f85599d6a145ad0d228b085958f, type: 3}
   reloadTime: 2
-  fireRate: 10
-  clipSize: 30
+  fireRate: 2
+  clipSize: 16
   bulletSpread: 0
   recoilForce: 0
-  rifleBullet: {fileID: 11400000, guid: b40745f0ebd8777438f388a5e176355c, type: 2}
+  rifleBullet: {fileID: 11400000, guid: 88e50113284b1d24194d0c2eb0d56ca7, type: 2}
