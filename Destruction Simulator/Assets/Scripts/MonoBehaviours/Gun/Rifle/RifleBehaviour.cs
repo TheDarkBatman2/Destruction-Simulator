@@ -12,8 +12,13 @@ public class RifleBehaviour : MonoBehaviour
     public int clipAmmo = 0;
     public bool reloaded;
     private float nextTimeToFire = 0f;
+    private bool isInitialized = false;
 
-
+    IEnumerator initilizeGun(){
+        // Animation here
+        yield return new WaitForSeconds(rifleItem.initilizeTime);
+        isInitialized = true;
+    }
     void Awake(){
         reloaded = true;
         clipAmmo = Mathf.Min(rifleItem.clipSize ,totalAmmo);
@@ -50,7 +55,7 @@ public class RifleBehaviour : MonoBehaviour
     }
 
     IEnumerator Reload(){
-
+        // Animation here
         yield return new WaitForSeconds(rifleItem.reloadTime);
         clipAmmo = Mathf.Min(rifleItem.clipSize ,totalAmmo);
         totalAmmo -= clipAmmo;
@@ -110,14 +115,17 @@ public class RifleBehaviour : MonoBehaviour
 
     private void OnDisable() {
         // disable ammo counter
+        isInitialized = false;
     }
 
     private void OnEnable() {
         // it will disable realoading to avoid bugs
+        // activate ammo counter
         if (clipAmmo < rifleItem.clipSize && reloaded == false){
             StartCoroutine(Reload());
         }
-        // activate ammo counter
-        
+        else{
+            StartCoroutine(initilizeGun());
+        }
     }
 }

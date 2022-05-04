@@ -15,10 +15,6 @@ public class PistolBehaviour : MonoBehaviour
     private bool semiFireIsReady = true;
     private bool isInitialized = false;
 
-    private void OnEnable() { // When item is in hand
-        StartCoroutine(initilizeGun());
-    }
-
     IEnumerator initilizeGun(){
         // Animation here
         yield return new WaitForSeconds(pistolItem.initilizeTime);
@@ -69,7 +65,7 @@ public class PistolBehaviour : MonoBehaviour
     }
 
     IEnumerator Reload(){
-
+        // Animation here
         yield return new WaitForSeconds(pistolItem.reloadTime);
         clipAmmo = Mathf.Min(pistolItem.clipSize ,totalAmmo);
         totalAmmo -= clipAmmo;
@@ -129,14 +125,18 @@ public class PistolBehaviour : MonoBehaviour
 
     private void OnDisable() {
         // disable ammo counter
+        isInitialized = false;
     }
 
     private void OnEnable() {
         // it will disable realoading to avoid bugs
-        if (clipAmmo < pistolItem.clipSize && reloaded == false){
-            StartCoroutine(Reload());
-        }
         // activate ammo counter
+        if (clipAmmo < pistolItem.clipSize && reloaded == false){
+            StartCoroutine(Reload()); // Initilize + Reload, both animations, reload is basically realoding + initlizing, so times wont add
+        }
+        else{
+            StartCoroutine(initilizeGun());
+        }
         
     }
 }
