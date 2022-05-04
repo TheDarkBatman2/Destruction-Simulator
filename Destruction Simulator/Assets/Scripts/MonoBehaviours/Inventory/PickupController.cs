@@ -33,7 +33,7 @@ public class PickupController : MonoBehaviour
         }
     }
 
-    public void OnPickup(){
+    public void OnPickup(){ // some functionalities are already in EnableItemInSlot so we dont need to put that here 
         Destroy(gameObject.GetComponent<Rigidbody>());
         GetComponent<Collider>().enabled = false; // so it doesnt push other objects 
         EnableAllComponents();
@@ -42,12 +42,17 @@ public class PickupController : MonoBehaviour
     }
 
     public void OnDrop(){
-        DisableAllComponents();
+        DisableAllComponents(); // We cant have DisableItemInSlot when dropping an item so we must put it here aswell
+        
         References.Instance.itemPanelTexture.sprite = null; // Sets the texture of item panel
         References.Instance.itemPanelCounts.text = "---"; // Sets the panel counts to ---
         GetComponent<Collider>().enabled = true; // so it doesnt push other objects 
         Rigidbody rb = this.GetComponent<Rigidbody>();
         rb.AddForce(References.Instance.playerHeadTransform.forward * 20, ForceMode.Impulse);
+        // Adjust item position
+        References.Instance.rotateGunScript.xOffset -= item.inHandOffset.x;
+        References.Instance.rotateGunScript.yOffset -= item.inHandOffset.y;
+        References.Instance.rotateGunScript.zOffset -= item.inHandOffset.z;
         // rb.velocity += References.Instance.playerVelocity;
 
         //Add random rotation

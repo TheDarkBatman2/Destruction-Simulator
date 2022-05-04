@@ -17,6 +17,7 @@ MonoBehaviour:
   itemPanelIcon: {fileID: 21300000, guid: e15e3a8a769c3a14c875fd33cee8ddfd, type: 3}
   description: 
   originalPrefab: {fileID: 6992263821234891095, guid: eb8c2f85599d6a145ad0d228b085958f, type: 3}
+  inHandOffset: {x: 0.75, y: 0, z: 1}
   reloadTime: 2
   fireRate: 2
   clipSize: 16

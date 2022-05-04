@@ -54,22 +54,30 @@ public class HotbarContoller : MonoBehaviour
     public void SlotColorEnabled(int indx){
         hotbarSlots[indx].gameObject.GetComponent<Image>().color = activeSlotColor; // Change color of slot
     }
-    public void ActivateItemInSlot(int indx){
+    public void ActivateItemInSlot(int indx){ // Every time item is equipped 
         GameObject obj = hotbarSlots[indx].itemObject;
         if (obj != null){
             References.Instance.itemPanelTexture.sprite = hotbarSlots[indx].GetItem().itemPanelIcon;  // Sets the texture of item panel
             obj.SetActive(true);
             FixScale_Parent(obj);
+            // Adjust item position
+            References.Instance.rotateGunScript.xOffset += hotbarSlots[indx].GetItem().inHandOffset.x;
+            References.Instance.rotateGunScript.yOffset += hotbarSlots[indx].GetItem().inHandOffset.y;
+            References.Instance.rotateGunScript.zOffset += hotbarSlots[indx].GetItem().inHandOffset.z;
         }
     }
 
-    private void DisableItemInSlot(int indx){
+    private void DisableItemInSlot(int indx){ // Every time item is unequipped 
         GameObject obj = hotbarSlots[indx].itemObject;
         References.Instance.itemPanelCounts.text = "---"; // Sets the panel counts to ---
         if (obj != null){
             References.Instance.itemPanelTexture.sprite = null;  // Sets the texture of item panel
             obj.transform.SetParent(null); // to make sure if i fix scale it wont bug anything
             obj.SetActive(false);
+            // Adjust item position
+            References.Instance.rotateGunScript.xOffset -= hotbarSlots[indx].GetItem().inHandOffset.x;
+            References.Instance.rotateGunScript.yOffset -= hotbarSlots[indx].GetItem().inHandOffset.y;
+            References.Instance.rotateGunScript.zOffset -= hotbarSlots[indx].GetItem().inHandOffset.z;
         }
     }
 

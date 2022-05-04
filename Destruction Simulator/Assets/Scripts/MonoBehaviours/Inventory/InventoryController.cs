@@ -13,6 +13,15 @@ public class InventoryController : MonoBehaviour
         ResetInventory();
     }
 
+    public ItemSlot getEmptySlot(){
+        foreach (ItemSlot slot in hotbarController.hotbarSlots){ // check for space
+            if (slot.GetItem() == blankItem){
+                return slot;
+            }          
+        }
+        return null;
+    }
+
     public void ResetInventory(){
         foreach (ItemSlot slot in hotbarController.hotbarSlots){
             slot.SetItem(blankItem);
@@ -20,13 +29,9 @@ public class InventoryController : MonoBehaviour
     }
     
     public void AddItem(PickupController itemPC){
-        foreach (ItemSlot slot in hotbarController.hotbarSlots){ // check for space
-                    if (slot.GetItem() == blankItem){
-                        slot.SetItem(itemPC.item ,itemPC.gameObject); // adds item here
-                        break;
-                    }          
-        }
+        getEmptySlot().SetItem(itemPC.item ,itemPC.gameObject); // adds item here, Null check is somewhere else
     }
+
     public void UpdateActiveSlot(){
         // show current activate slot
         ItemSlot activeSlot = hotbarController.hotbarSlots[hotbarController.activeSlot];
@@ -42,7 +47,7 @@ public class InventoryController : MonoBehaviour
     {
         // Pickup
         if (Input.GetKeyDown(KeyCode.E)){
-            // if it has valid state it will pickup item in range
+            // if it has valid state it will pickup item in range and if it has enough space
             CheckAndAddItem();
         }
         // Drop
@@ -60,8 +65,10 @@ public class InventoryController : MonoBehaviour
         if (Physics.Raycast(ray, out hit ,pickupRange)){
             PickupController temp = hit.transform.gameObject.GetComponent<PickupController>();
             if (temp != null){
-                PickupItem(temp);
-                AddItem(temp);
+                if (getEmptySlot() != null){
+                    PickupItem(temp);
+                    AddItem(temp);
+                }
             }
         }
     }

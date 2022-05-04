@@ -24,6 +24,7 @@ public class References : MonoBehaviour
     public Transform gunContainer;
     public Transform gunHolder;
     public Transform gunCursor;
+    public RotateGun rotateGunScript;
     public LayerMask shootableLayers;
     public TMP_Text itemPanelCounts;
     public Image itemPanelTexture;
