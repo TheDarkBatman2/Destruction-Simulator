@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: 4da3f430b0edebd4eb508c100eae7fc0, type: 2}
-  thisAgent: {fileID: 0}
+  targetTransform: {fileID: 0}
 --- !u!195 &4062868612809227074
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ NavMeshAgent:
   m_Height: 1
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 3
 --- !u!1 &1417265512194089023
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc7160fa1cd8714cb0d3ce30df70213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: c2e83a807fceb2747a241dcda5491042, type: 2}
---- !u!114 &5142657936121591801
+  item: {fileID: 11400000, guid: 8fc9673ec8c0c874b91845ed0dde4738, type: 2}
+--- !u!114 &3611089076847215180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22,10 +22,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6992263821234891095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10b6eb590681f4c41ac041f6eebf7d7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5322453613378fe418f612baa3fd785b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rifleItem: {fileID: 11400000, guid: c2e83a807fceb2747a241dcda5491042, type: 2}
+  pistolItem: {fileID: 11400000, guid: 8fc9673ec8c0c874b91845ed0dde4738, type: 2}
   muzzleFlash: {fileID: 5435766986652509432}
   GunTip: {fileID: 2524099054948491095}
   totalAmmo: 500
@@ -244,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_Name
-      value: Pistol
+      value: Pistol_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}

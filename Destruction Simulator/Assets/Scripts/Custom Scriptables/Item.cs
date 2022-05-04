@@ -16,6 +16,7 @@ public class Item : ScriptableObject
 
     [Header("If its not set , on pickup it will set rotation to 0")]
     public GameObject originalPrefab; // if we want to reset obejct or use its rotation in some cases
+    public float initilizeTime = 0f; // It may not be used
 
     [Header("Additional offset on pickup")]
     public Vector3 inHandOffset = new Vector3(0f, 0f, 0f);

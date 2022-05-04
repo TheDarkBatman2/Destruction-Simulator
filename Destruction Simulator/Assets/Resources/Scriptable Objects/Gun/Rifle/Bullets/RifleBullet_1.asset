@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ecf8dea71d6a364fbb29ebb17fb0229, type: 3}
-  m_Name: PistolRifleBullet
+  m_Name: RifleBullet_1
   m_EditorClassIdentifier: 
-  bulletDamage: 0.5
-  bulletForce: 10
-  bulletForceDistance: 0.9
+  bulletDamage: 1
+  bulletForce: 20
+  bulletForceDistance: 0.8
   shotLine: {fileID: 0}
   bulletImpact: {fileID: 0}
   bulletTrail: {fileID: 8937695556065582286, guid: fc6b3beda90745142a634fe61a840c7c, type: 3}

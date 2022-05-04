@@ -27,20 +27,22 @@ public class HotbarContoller : MonoBehaviour
         // Check for button press 1-9
         for (int i = 0; i < hotbarKeys.Length; i++){
             
-            if (Input.GetKeyDown(hotbarKeys[i]))
-            {
-                if (i != activeSlot) { // if its not currently active
+            if (i <= hotbarSlotSize-1){
+                if (Input.GetKeyDown(hotbarKeys[i]))
+                {
+                    if (i != activeSlot) { // if its not currently active
 
-                    // disable previous object
-                    DisableItemInSlot(activeSlot);
-                    SlotColorDisabled(activeSlot); // prev active slot
-                    activeSlot = i;
-                    SlotColorEnabled(activeSlot); // cur active slot
+                        // disable previous object
+                        DisableItemInSlot(activeSlot);
+                        SlotColorDisabled(activeSlot); // prev active slot
+                        activeSlot = i;
+                        SlotColorEnabled(activeSlot); // cur active slot
 
-                    break;
+                        break;
 
-                    // enable current object
-                    // it will be in update inventory method
+                        // enable current object
+                        // it will be in update inventory method
+                    }
                 }
             }
         }
