@@ -15,7 +15,7 @@ MonoBehaviour:
   wavesSetup:
   - waveName: Alpha
     enemies:
-    - prefab: {fileID: 1417265511712075990, guid: 425024f32ddda114da7a999ba970c82a, type: 3}
+    - prefab: {fileID: 4162975050790303147, guid: 4d3c83ba53d80444786fc3e2f61a1e5b, type: 3}
       count: 10
       spawnRate: 1
       spawnDelay: 3
