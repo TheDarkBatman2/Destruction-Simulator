@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask; // layers it can have collision with it
     public float jumpHeight = 3.0f;
     private bool isGrounded;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();

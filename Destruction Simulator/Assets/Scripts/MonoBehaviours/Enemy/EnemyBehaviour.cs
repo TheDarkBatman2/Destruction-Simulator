@@ -15,7 +15,7 @@ public class EnemyBehaviour : MonoBehaviour
     
     // Initilize
 
-    private void Awake() {
+    public virtual void Awake() {
         hpBar=  gameObject.GetComponentInChildren<TMP_Text>();
         hp = enemyStats.enemyHp;
         damage = enemyStats.enemyDamage;

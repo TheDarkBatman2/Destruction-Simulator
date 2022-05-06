@@ -16,3 +16,7 @@ MonoBehaviour:
   enemyHp: 20
   enemyDamage: 2
   enemySpeed: 2
+  startShootDelay: 2
+  repeatShootDelay: 6
+  projectilePrefab: {fileID: 6453386608903314559, guid: 5a1458f889fdc5f45aac4d83e7e9c108, type: 3}
+  projectileSpeed: 6

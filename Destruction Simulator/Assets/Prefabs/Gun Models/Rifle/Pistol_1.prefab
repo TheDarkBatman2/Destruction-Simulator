@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8526897443678272619, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6860895033569716450, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_Convex
       value: 1

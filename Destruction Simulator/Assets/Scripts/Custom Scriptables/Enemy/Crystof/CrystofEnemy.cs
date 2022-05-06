@@ -6,5 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Crystof", menuName ="Enemy/Crystof")]
 public class CrystofEnemy : Enemy
 {
-    // override name of enemy here
+    public float startShootDelay = 2.0f;
+    public float repeatShootDelay = 6.0f;
+    public GameObject projectilePrefab;
+    public float projectileSpeed = 10f;
 }
