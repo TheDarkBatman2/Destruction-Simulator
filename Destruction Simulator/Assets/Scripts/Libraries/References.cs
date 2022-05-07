@@ -19,6 +19,7 @@ public class References : MonoBehaviour
     private Vector3 prevTruckPos;
     private Vector3 curTruckPos;
     public Vector3 truckVelocity;
+    public CarHealthSystem truckHpScript;
     // public LayerMask wallsLayer;
     // Gun
     public Transform gunContainer;
@@ -26,6 +27,7 @@ public class References : MonoBehaviour
     public Transform gunCursor;
     public RotateGun rotateGunScript;
     public LayerMask shootableLayers;
+    public LayerMask projectileDestructionLayer;
     public TMP_Text itemPanelCounts;
     public Image itemPanelTexture;
     // Camera
@@ -45,6 +47,7 @@ public class References : MonoBehaviour
         playerCurrPos = playerTransform.position;
         prevTruckPos = truckTransform.position;
         curTruckPos = truckTransform.position;
+        truckHpScript = truckTransform.GetComponent<CarHealthSystem>();
         Instance = this;
     }
 

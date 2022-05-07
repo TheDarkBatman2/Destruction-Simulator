@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 2563.7358, g: 1954.387, b: 9854.531, a: 1}
+  m_IndirectSpecularColor: {r: 2339.1191, g: 1692.1099, b: 9859.391, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -849,6 +849,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 977116979}
     - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
+      propertyPath: truckHpScript
+      value: 
+      objectReference: {fileID: 1091513399}
+    - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: truckTransform
       value: 
       objectReference: {fileID: 1091513408}
@@ -866,7 +870,7 @@ PrefabInstance:
       objectReference: {fileID: 1436191867}
     - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: criticalDistance
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: itemPanelBullets
@@ -887,6 +891,10 @@ PrefabInstance:
     - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: shootableLayers.m_Bits
       value: 5943
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
+      propertyPath: projectileDestructionLayer.m_Bits
+      value: 2560
       objectReference: {fileID: 0}
     - target: {fileID: 6147134781665731282, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: m_RootOrder
@@ -1161,7 +1169,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 104839.09
+  m_Intensity: 77385.07
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1218,13 +1226,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,7 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 104839.09
+  m_Intensity: 77385.07
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1299,7 +1307,7 @@ MonoBehaviour:
   m_ShadowResolution:
     m_Override: 512
     m_UseOverride: 0
-    m_Level: 3
+    m_Level: 0
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
@@ -2625,6 +2633,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8136333685850220898, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
   m_PrefabInstance: {fileID: 2106104667}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1091513399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091513398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96081f68c96e88a4191df1d4f35b240f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 20
 --- !u!4 &1091513408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8908613527126012888, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
@@ -3689,7 +3710,7 @@ Transform:
   - {fileID: 558419194}
   - {fileID: 421975576}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872119519
 GameObject:
@@ -4182,11 +4203,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136333685850220898, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_Name
-      value: Truck Variant
+      value: Truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136333685850220898, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_TagString
+      value: Truck
       objectReference: {fileID: 0}
     - target: {fileID: 8908613527126012888, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8908613527126012888, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_LocalPosition.x

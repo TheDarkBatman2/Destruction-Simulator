@@ -8,6 +8,7 @@ public class CrystofEnemy : Enemy
 {
     public float startShootDelay = 2.0f;
     public float repeatShootDelay = 6.0f;
-    public GameObject projectilePrefab;
     public float projectileSpeed = 10f;
+    public float projectileDamage = 2f;
+    public GameObject projectilePrefab;
 }
