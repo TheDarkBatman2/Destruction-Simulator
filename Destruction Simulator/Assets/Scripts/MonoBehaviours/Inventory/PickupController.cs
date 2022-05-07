@@ -15,6 +15,7 @@ public class PickupController : MonoBehaviour
             gameObject.AddComponent<NavMeshObstacle>();
         }
         DisableAllComponents();
+        this.gameObject.layer = 18; // Fps layer
         
     }
 
