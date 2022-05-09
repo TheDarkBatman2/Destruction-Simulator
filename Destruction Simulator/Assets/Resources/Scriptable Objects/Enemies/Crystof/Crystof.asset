@@ -21,4 +21,4 @@ MonoBehaviour:
   repeatShootDelay: 2
   projectileSpeed: 70
   projectileDamage: 2
-  projectilePrefab: {fileID: 6453386608903314559, guid: 5a1458f889fdc5f45aac4d83e7e9c108, type: 3}
+  projectilePrefab: {fileID: 3981256769204526396, guid: b90c419e7302ec44e87409963c91caa3, type: 3}
