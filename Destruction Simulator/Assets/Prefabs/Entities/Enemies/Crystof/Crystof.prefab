@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1048600388}
   - component: {fileID: 1048600387}
   m_Layer: 12
-  m_Name: hpBar (1)
+  m_Name: hpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

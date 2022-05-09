@@ -15,7 +15,7 @@ public class CarHealthSystem : MonoBehaviour
         if (hp - hitPoint < 0){
             hp = 0;
             References.Instance.truckSlider.value = hp;
-            Destroy(this.transform);
+            // Destroy(this.gameObject);
         }
         else{
             hp -= hitPoint;

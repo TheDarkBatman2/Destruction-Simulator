@@ -21,6 +21,8 @@ public class References : MonoBehaviour
     public Vector3 truckVelocity;
     public Slider truckSlider;
     public CarHealthSystem truckHpScript;
+    public TMP_Text playerScoreTextUi;
+    private float playerScore = 0;
     // public LayerMask wallsLayer;
     // Gun
     public Transform gunContainer;
@@ -50,6 +52,7 @@ public class References : MonoBehaviour
         curTruckPos = truckTransform.position;
         truckHpScript = truckTransform.GetComponent<CarHealthSystem>();
         Instance = this;
+        AddScore(0f); // just to update
     }
 
     private void Update() {
@@ -64,6 +67,11 @@ public class References : MonoBehaviour
 
     public void StartSpawningGunTrail(Bullet bulletScript, TrailRenderer trail, Vector3 endPos, RaycastHit hit){
         StartCoroutine(bulletScript.SpawnTrail(trail, endPos, hit));
+    }
+
+    public void AddScore(float score){
+        playerScore += score;
+        playerScoreTextUi.text = playerScore.ToString();
     }
 
 }

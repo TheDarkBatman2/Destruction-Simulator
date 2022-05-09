@@ -16,6 +16,7 @@ MonoBehaviour:
   enemyHp: 20
   enemyDamage: 2
   enemySpeed: 2
+  score: 200
   startShootDelay: 2
   repeatShootDelay: 2
   projectileSpeed: 70

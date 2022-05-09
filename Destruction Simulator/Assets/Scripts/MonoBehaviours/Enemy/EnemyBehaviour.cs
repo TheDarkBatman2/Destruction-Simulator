@@ -39,6 +39,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     // must be over
     public virtual void Death(){
+        References.Instance.AddScore(enemyStats.score);
         Destroy(this.gameObject);
     }
 

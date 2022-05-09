@@ -12,5 +12,6 @@ public class Enemy : ScriptableObject
     public float enemyHp = 20f;
     public float enemyDamage = 2f;
     public float enemySpeed = 2f;
+    public float score = 200f;
 
 }
