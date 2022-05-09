@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Defulat Item
   itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  itemPanelIcon: {fileID: 21300000, guid: 3905558a00e6f1b40935800d1f346dff, type: 3}
+  itemPanelIcon: {fileID: 21300000, guid: 23dc62cfc947b1d42ae9c2a3bb6da5f9, type: 3}
   description: 
   originalPrefab: {fileID: 6203985196886591649, guid: 2fd640dcd28b0d14da503ed88a3abbca, type: 3}
+  initilizeTime: 0
+  inHandOffset: {x: 0, y: 0, z: 0}
   reloadTime: 2
   fireRate: 10
   clipSize: 30

@@ -19,6 +19,7 @@ public class References : MonoBehaviour
     private Vector3 prevTruckPos;
     private Vector3 curTruckPos;
     public Vector3 truckVelocity;
+    public Slider truckSlider;
     public CarHealthSystem truckHpScript;
     // public LayerMask wallsLayer;
     // Gun
