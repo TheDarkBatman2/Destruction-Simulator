@@ -3801,7 +3801,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572783292}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 53cab9c1cebf62b4e8c1e668a590c831, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -4606,6 +4606,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 269401608, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Damper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 269401608, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 269401608, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_MassScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 269401609, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_XMotion
       value: 0
@@ -4621,6 +4633,22 @@ PrefabInstance:
     - target: {fileID: 269401609, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_EnableCollision
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 269401610, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 271489476, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Damper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 271489476, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 271489476, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_MassScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 271489477, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_XMotion
@@ -4638,6 +4666,22 @@ PrefabInstance:
       propertyPath: m_EnableCollision
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 271489478, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 628219590, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Damper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 628219590, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 628219590, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_MassScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 628219591, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_XMotion
       value: 0
@@ -4654,6 +4698,10 @@ PrefabInstance:
       propertyPath: m_EnableCollision
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 628219592, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 665970731, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_XMotion
       value: 0
@@ -4669,6 +4717,22 @@ PrefabInstance:
     - target: {fileID: 665970731, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_EnableCollision
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 665970732, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Damper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 665970732, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 665970732, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_MassScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 665970733, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1039481894, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_Enabled
@@ -4726,6 +4790,34 @@ PrefabInstance:
       propertyPath: m_EnableCollision
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1378135649, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Damper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378135649, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378135649, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_MassScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378135650, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702422982, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Damper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702422982, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702422982, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_MassScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1702422983, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_XMotion
       value: 0
@@ -4742,6 +4834,10 @@ PrefabInstance:
       propertyPath: m_EnableCollision
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1702422985, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2026865884, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_XMotion
       value: 0
@@ -4758,6 +4854,34 @@ PrefabInstance:
       propertyPath: m_EnableCollision
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2026865885, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Damper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026865885, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026865885, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_MassScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026865886, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132993920, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Damper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132993920, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Spring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132993920, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_MassScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2132993921, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_XMotion
       value: 0
@@ -4773,6 +4897,10 @@ PrefabInstance:
     - target: {fileID: 2132993921, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_EnableCollision
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132993923, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8136333685850220898, guid: 1418bac63d2958445a5b116cb01d1330, type: 3}
       propertyPath: m_Name
