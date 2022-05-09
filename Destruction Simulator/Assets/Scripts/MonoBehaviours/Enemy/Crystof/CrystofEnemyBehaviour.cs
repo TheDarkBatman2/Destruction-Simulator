@@ -29,7 +29,10 @@ public class CrystofEnemyBehaviour : EnemyBehaviour
 
     public void Shoot(){
         GameObject _projectile = Instantiate(crystofStats.projectilePrefab, tailTransform.position, Quaternion.identity);
-        _projectile.GetComponent<Rigidbody>().AddForce((References.Instance.truckTransform.position-tailTransform.position).normalized * crystofStats.projectileSpeed, ForceMode.Impulse);
+        Rigidbody _rb = _projectile.GetComponent<Rigidbody>();
+        Vector3 force = References.Instance.truckTransform.position-tailTransform.position;
+        _rb.AddForce(force.normalized * Mathf.Pow(force.magnitude, 0.5f) * crystofStats.projectileForwardSpeed, ForceMode.Impulse);
+        _rb.AddForce(-Vector3.down * Mathf.Pow(force.magnitude, 0.5f) * crystofStats.projectileTopSpeed, ForceMode.Impulse);
         _projectile.GetComponent<CrystofProjectile>().damage = crystofStats.projectileDamage;
     }
 }

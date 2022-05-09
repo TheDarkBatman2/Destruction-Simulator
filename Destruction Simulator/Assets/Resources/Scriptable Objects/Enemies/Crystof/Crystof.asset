@@ -19,6 +19,7 @@ MonoBehaviour:
   score: 200
   startShootDelay: 2
   repeatShootDelay: 2
-  projectileSpeed: 70
+  projectileForwardSpeed: 4
+  projectileTopSpeed: 4
   projectileDamage: 2
   projectilePrefab: {fileID: 3981256769204526396, guid: b90c419e7302ec44e87409963c91caa3, type: 3}
