@@ -7,8 +7,11 @@ public class RotateGun : MonoBehaviour {
     public float yOffset = 1f;
 
     void Update() {
-        transform.rotation = Quaternion.Lerp(transform.rotation, References.Instance.playerHeadTransform.rotation, Time.deltaTime * rotationSpeed);
         transform.position = References.Instance.playerHeadTransform.position + xOffset * References.Instance.playerHeadTransform.right + zOffset * References.Instance.playerHeadTransform.forward + yOffset * References.Instance.playerHeadTransform.up;
+    }
+    
+    void FixedUpdate(){
+        transform.rotation = Quaternion.Lerp(transform.rotation, References.Instance.playerHeadTransform.rotation, Time.deltaTime * rotationSpeed);
     }
 
 }

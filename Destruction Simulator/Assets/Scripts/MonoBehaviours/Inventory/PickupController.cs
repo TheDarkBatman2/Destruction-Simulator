@@ -15,7 +15,6 @@ public class PickupController : MonoBehaviour
             gameObject.AddComponent<NavMeshObstacle>();
         }
         DisableAllComponents();
-        this.gameObject.layer = 18; // Fps layer
         
     }
 
@@ -39,6 +38,8 @@ public class PickupController : MonoBehaviour
         GetComponent<Collider>().enabled = false; // so it doesnt push other objects 
         EnableAllComponents();
 
+        this.gameObject.layer = 18; // Fps layer, we need to make it recursive
+
         Destroy(this);// to make sure you cant pick it up again xD
     }
 
@@ -59,6 +60,8 @@ public class PickupController : MonoBehaviour
         //Add random rotation
         float random = Random.Range(-2f, 2f);
         rb.AddTorque(new Vector3(random, random, random) * 10);
+
+        this.gameObject.layer = 0; // Fps layer, we need to make it recursive
     }
 
 }
