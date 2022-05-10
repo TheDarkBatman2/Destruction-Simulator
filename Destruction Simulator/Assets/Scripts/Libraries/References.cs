@@ -31,8 +31,9 @@ public class References : MonoBehaviour
     public RotateGun rotateGunScript;
     public LayerMask shootableLayers;
     public LayerMask projectileDestructionLayer;
-    public TMP_Text itemPanelCounts;
     public Image itemPanelTexture;
+    public Slider clipAmmoSlider;
+    public Slider totalAmmoSlider;
     // Camera
     public Camera fpsCam;
     // Item

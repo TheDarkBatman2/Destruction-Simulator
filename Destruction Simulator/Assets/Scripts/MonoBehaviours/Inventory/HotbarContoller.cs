@@ -73,7 +73,7 @@ public class HotbarContoller : MonoBehaviour
         GameObject obj = hotbarSlots[indx].itemObject;
         References.Instance.itemPanelCounts.text = "---"; // Sets the panel counts to ---
         if (obj != null){
-            References.Instance.itemPanelTexture.sprite = null;  // Sets the texture of item panel
+            References.Instance.itemPanelTexture.sprite = References.Instance.blankItem.itemIcon;  // Sets the texture of item panel
             obj.transform.SetParent(null); // to make sure if i fix scale it wont bug anything
             obj.SetActive(false);
             // Adjust item position
