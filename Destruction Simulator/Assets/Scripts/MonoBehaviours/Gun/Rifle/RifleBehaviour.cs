@@ -56,15 +56,25 @@ public class RifleBehaviour : MonoBehaviour
 
     IEnumerator Reload(){
         // Animation here
+        StartCoroutine(ReloadAnimation(pistolItem.reloadTime, 60f));
         yield return new WaitForSeconds(rifleItem.reloadTime);
         clipAmmo = Mathf.Min(rifleItem.clipSize ,totalAmmo);
         totalAmmo -= clipAmmo;
         reloaded = true;
     }
-    
+
+    IEnumerator ReloadAnimation(float reloadTime, float amount){
+        for (int i = 0; i < (int) amount; i++){
+            References.Instance.clipAmmoSlider.value = pistolItem.clipSize/amount * i;
+            print(reloadTime/amount);
+            yield return new WaitForSeconds(reloadTime/amount);
+        }
+    }
     public void UpdateItemPanel(){
-        References.Instance.clipAmmoSlider.value = clipAmmo;
-        References.Instance.totalAmmoSlider.value = totalAmmo;    
+        if (reloaded){ // it will run sooner so it will include 0 ammo, for better animation
+            References.Instance.clipAmmoSlider.value = clipAmmo;
+            References.Instance.totalAmmoSlider.value = totalAmmo;
+        }
     }
 
     public void Shoot()
