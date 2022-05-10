@@ -73,7 +73,8 @@ public class PistolBehaviour : MonoBehaviour
     }
     
     public void UpdateItemPanel(){
-        References.Instance.itemPanelCounts.text = clipAmmo.ToString() + "/" + totalAmmo.ToString();
+        References.Instance.clipAmmoSlider.value = clipAmmo;
+        References.Instance.totalAmmoSlider.value = totalAmmo;
     }
 
     public void Shoot()
@@ -124,13 +125,17 @@ public class PistolBehaviour : MonoBehaviour
 
 
     private void OnDisable() {
-        // disable ammo counter
+        // disable ammo counter, no need because we are doing it in pickup controller every time
         isInitialized = false;
     }
 
     private void OnEnable() {
         // it will disable realoading to avoid bugs
-        // activate ammo counter
+        References.Instance.clipAmmoSlider.gameObject.SetActive(true);
+        References.Instance.totalAmmoSlider.gameObject.SetActive(true); 
+        References.Instance.clipAmmoSlider.maxValue = pistolItem.clipSize;
+        References.Instance.totalAmmoSlider.maxValue = pistolItem.maxTotalBullet;
+
         if (clipAmmo < pistolItem.clipSize && reloaded == false){
             StartCoroutine(Reload()); // Initilize + Reload, both animations, reload is basically realoding + initlizing, so times wont add
         }

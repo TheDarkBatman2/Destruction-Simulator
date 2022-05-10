@@ -47,7 +47,10 @@ public class PickupController : MonoBehaviour
         DisableAllComponents(); // We cant have DisableItemInSlot when dropping an item so we must put it here aswell
         
         References.Instance.itemPanelTexture.sprite =  References.Instance.blankItem.itemIcon; // Sets the texture of item panel
-        References.Instance.clipAmmoSlider. // Sets the panel counts to ---
+        
+        References.Instance.clipAmmoSlider.gameObject.SetActive(false); // Disables the ammo counter
+        References.Instance.totalAmmoSlider.gameObject.SetActive(false); // Disables the ammo counter
+
         GetComponent<Collider>().enabled = true; // so it doesnt push other objects 
         Rigidbody rb = this.GetComponent<Rigidbody>();
         rb.AddForce(References.Instance.playerHeadTransform.forward * 20, ForceMode.Impulse);

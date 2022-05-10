@@ -12,7 +12,10 @@ public class RifleItem : Item
     public int clipSize;
     public float bulletSpread;
     public float recoilForce;
+    public int maxTotalBullet = 500; // better not to be changed
+
     public RifleBullet rifleBullet;
+    
       
 
 }
