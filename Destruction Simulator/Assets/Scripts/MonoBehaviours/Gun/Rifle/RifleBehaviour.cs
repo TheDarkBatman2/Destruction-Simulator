@@ -56,7 +56,7 @@ public class RifleBehaviour : MonoBehaviour
 
     IEnumerator Reload(){
         // Animation here
-        StartCoroutine(ReloadAnimation(pistolItem.reloadTime, 60f));
+        StartCoroutine(ReloadAnimation(rifleItem.reloadTime, 60f));
         yield return new WaitForSeconds(rifleItem.reloadTime);
         clipAmmo = Mathf.Min(rifleItem.clipSize ,totalAmmo);
         totalAmmo -= clipAmmo;
@@ -65,7 +65,7 @@ public class RifleBehaviour : MonoBehaviour
 
     IEnumerator ReloadAnimation(float reloadTime, float amount){
         for (int i = 0; i < (int) amount; i++){
-            References.Instance.clipAmmoSlider.value = pistolItem.clipSize/amount * i;
+            References.Instance.clipAmmoSlider.value = rifleItem.clipSize/amount * i;
             print(reloadTime/amount);
             yield return new WaitForSeconds(reloadTime/amount);
         }
