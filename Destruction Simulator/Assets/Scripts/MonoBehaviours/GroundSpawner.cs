@@ -23,7 +23,7 @@ public class GroundSpawner : MonoBehaviour
         tilesList = tilesListArray.ToList();
         NextSpawnerPoint = this.transform;
 
-        for(int i=0; i <5; i++){
+        for(int i=0; i < 2; i++){
             SpawnTile();
         }
     }

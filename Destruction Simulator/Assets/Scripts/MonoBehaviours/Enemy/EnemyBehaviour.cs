@@ -20,6 +20,7 @@ public class EnemyBehaviour : MonoBehaviour
         hp = enemyStats.enemyHp;
         damage = enemyStats.enemyDamage;
         thisAgent = gameObject.GetComponent<NavMeshAgent>();
+        thisAgent.speed = enemyStats.enemySpeed;
         UpdateHpBar();
     }
     private void Start(){
