@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class CarHealthSystem : MonoBehaviour
 {
     public float hp = 20f;
+    public TextMeshProUGUI ScoreTxt;
+    public TextMeshProUGUI HighScoreTxt ;
+
 
     private void Awake() {
         References.Instance.truckSlider.maxValue = hp;
@@ -15,7 +20,13 @@ public class CarHealthSystem : MonoBehaviour
         if (hp - hitPoint < 0){
             hp = 0;
             References.Instance.truckSlider.value = hp;
-            // Destroy(this.gameObject);
+
+
+            //Destroy(this.gameObject);
+
+            ScoreTxt.text="SCORE : " +References.Instance.playerScoreTextUi.text.ToString();
+            //add highscore
+
         }
         else{
             hp -= hitPoint;
