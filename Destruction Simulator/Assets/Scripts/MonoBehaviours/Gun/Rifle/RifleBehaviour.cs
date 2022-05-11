@@ -55,26 +55,26 @@ public class RifleBehaviour : MonoBehaviour
     }
 
     IEnumerator Reload(){
-        // Animation here
-        StartCoroutine(ReloadAnimation(rifleItem.reloadTime, 60f));
+        // References.Instance.clipAmmoSlider.GetComponent<Animator>().SetBool("reload", true);
         yield return new WaitForSeconds(rifleItem.reloadTime);
         clipAmmo = Mathf.Min(rifleItem.clipSize ,totalAmmo);
         totalAmmo -= clipAmmo;
         reloaded = true;
+        // References.Instance.clipAmmoSlider.GetComponent<Animator>().SetBool("reload", false);
     }
 
-    IEnumerator ReloadAnimation(float reloadTime, float amount){
-        for (int i = 0; i < (int) amount; i++){
-            References.Instance.clipAmmoSlider.value = rifleItem.clipSize/amount * i;
-            print(reloadTime/amount);
-            yield return new WaitForSeconds(reloadTime/amount);
-        }
-    }
+    // IEnumerator ReloadAnimation(float reloadTime, float amount){
+    //     for (int i = 0; i < (int) amount; i++){
+    //         References.Instance.clipAmmoSlider.value = rifleItem.clipSize/amount * i;
+    //         print(reloadTime/amount);
+    //         yield return new WaitForSeconds(reloadTime/amount);
+    //     }
+    // }
     public void UpdateItemPanel(){
-        if (reloaded){ // it will run sooner so it will include 0 ammo, for better animation
-            References.Instance.clipAmmoSlider.value = clipAmmo;
-            References.Instance.totalAmmoSlider.value = totalAmmo;
-        }
+        // if (reloaded){ // it will run sooner so it will include 0 ammo, for better animation
+        References.Instance.clipAmmoSlider.value = (float) clipAmmo/rifleItem.clipSize;
+        References.Instance.totalAmmoSlider.value = (float) totalAmmo/rifleItem.maxTotalBullet;
+        // }
     }
 
     public void Shoot()
@@ -133,8 +133,6 @@ public class RifleBehaviour : MonoBehaviour
         // it will disable realoading to avoid bugs
         References.Instance.clipAmmoSlider.gameObject.SetActive(true);
         References.Instance.totalAmmoSlider.gameObject.SetActive(true); 
-        References.Instance.clipAmmoSlider.maxValue = rifleItem.clipSize;
-        References.Instance.totalAmmoSlider.maxValue = rifleItem.maxTotalBullet;
 
         if (clipAmmo < rifleItem.clipSize && reloaded == false){
             StartCoroutine(Reload());

@@ -65,28 +65,19 @@ public class PistolBehaviour : MonoBehaviour
     }
 
     IEnumerator Reload(){
-        // Animation here
-        StartCoroutine(ReloadAnimation(pistolItem.reloadTime, 60f));
+        // References.Instance.clipAmmoSlider.GetComponent<Animator>().SetBool("reload", true);
         yield return new WaitForSeconds(pistolItem.reloadTime);
         clipAmmo = Mathf.Min(pistolItem.clipSize ,totalAmmo);
         totalAmmo -= clipAmmo;
         reloaded = true;
-    }
-
-    IEnumerator ReloadAnimation(float reloadTime, float amount){
-
-        for (int i = 0; i < (int) amount; i++){
-            References.Instance.clipAmmoSlider.value = pistolItem.clipSize/amount * i;
-            print(reloadTime/amount);
-            yield return new WaitForSeconds(reloadTime/amount);
-        }
+        // References.Instance.clipAmmoSlider.GetComponent<Animator>().SetBool("reload", false);
     }
     
     public void UpdateItemPanel(){
-        if (reloaded){ // it will run sooner so it will include 0 ammo, for better animation
-            References.Instance.clipAmmoSlider.value = clipAmmo;
-            References.Instance.totalAmmoSlider.value = totalAmmo;
-        }
+        // if (reloaded){ // it will run sooner so it will include 0 ammo, for better animation
+        References.Instance.clipAmmoSlider.value = (float) clipAmmo/pistolItem.clipSize;
+        References.Instance.totalAmmoSlider.value = (float) totalAmmo/pistolItem.maxTotalBullet;
+        // }
     }
 
     public void Shoot()
@@ -145,8 +136,6 @@ public class PistolBehaviour : MonoBehaviour
         // it will disable realoading to avoid bugs
         References.Instance.clipAmmoSlider.gameObject.SetActive(true);
         References.Instance.totalAmmoSlider.gameObject.SetActive(true); 
-        References.Instance.clipAmmoSlider.maxValue = pistolItem.clipSize;
-        References.Instance.totalAmmoSlider.maxValue = pistolItem.maxTotalBullet;
 
         if (clipAmmo < pistolItem.clipSize && reloaded == false){
             StartCoroutine(Reload()); // Initilize + Reload, both animations, reload is basically realoding + initlizing, so times wont add
