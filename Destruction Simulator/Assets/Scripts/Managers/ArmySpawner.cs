@@ -30,7 +30,7 @@ public class ArmySpawner : MonoBehaviour
             }
 
             // Spawnrate
-            yield return new WaitForSeconds(enemy.spawnRate/(i * 0.5f));
+            yield return new WaitForSeconds(enemy.spawnRate/(Mathf.Pow(i, 0.5f)));
         }
     }
 
