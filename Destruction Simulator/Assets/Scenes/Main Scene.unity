@@ -5110,8 +5110,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1664560768}
     m_Modifications:
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: priority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: injectionPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: customPasses.Array.data[0].targetColorBuffer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: customPasses.Array.data[0].targetDepthBuffer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: customPasses.Array.data[1].targetColorBuffer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: customPasses.Array.data[1].targetDepthBuffer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4448259842124693820, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: m_Name
