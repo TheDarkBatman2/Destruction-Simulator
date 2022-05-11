@@ -27,13 +27,19 @@ public class RifleBullet : Bullet
                 }
             }
             if (hit.transform.tag == "Enemy"){
-                if (hit.transform){
-                    CrystofEnemyBehaviour _ceb = hit.transform.GetComponent<CrystofEnemyBehaviour>();
-                    if (_ceb){
-                        _ceb.Damage(bulletDamage);
-                    }
+                CrystofEnemyBehaviour _ceb = hit.transform.GetComponent<CrystofEnemyBehaviour>();
+                if (_ceb){
+                    _ceb.Damage(bulletDamage);
                 }
             }
+
+            if (hit.transform.tag == "ExplosivePlant"){
+                ExplosivePlant _ep = hit.transform.GetComponent<ExplosivePlant>();
+                if (_ep){
+                    _ep.Explode();
+                }
+            }
+
             if (hit.rigidbody != null){
                 hit.rigidbody.AddForce (-hit.normal * bulletForce, ForceMode.Impulse);
             }

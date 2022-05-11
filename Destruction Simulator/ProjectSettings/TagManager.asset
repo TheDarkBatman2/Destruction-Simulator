@@ -9,6 +9,7 @@ TagManager:
   - Crystal_Shard
   - Truck
   - ProjectileDamage
+  - ExplosivePlant
   layers:
   - Default
   - TransparentFX
