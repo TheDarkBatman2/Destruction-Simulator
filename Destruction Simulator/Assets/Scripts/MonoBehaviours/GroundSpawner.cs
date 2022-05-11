@@ -8,11 +8,11 @@ public class GroundSpawner : MonoBehaviour
       
     public GameObject[] tilesListArray;
     GameObject groundTile;
-    Vector3 NextSpawnerPoint;
+    private Transform NextSpawnerPoint;
     public void SpawnTile(){
         groundTile = tilesList [Random.Range (0, tilesList.Count)];
-        GameObject temp = Instantiate(groundTile, NextSpawnerPoint, Quaternion.identity);
-        NextSpawnerPoint=temp.transform.GetChild(1).transform.position;
+        GameObject tmp = Instantiate(groundTile, NextSpawnerPoint);
+        NextSpawnerPoint = tmp.transform.GetChild(1);  
 
         // Update navmesh
         References.Instance.navMesh.BuildNavMesh();
@@ -21,11 +21,12 @@ public class GroundSpawner : MonoBehaviour
     {
         tilesListArray = Resources.LoadAll<GameObject>("Valleys");
         tilesList = tilesListArray.ToList();
+        NextSpawnerPoint = this.transform;
 
-        for(int i=0; i <2; i++){
+        for(int i=0; i <5; i++){
             SpawnTile();
         }
-
     }
+
 
 }

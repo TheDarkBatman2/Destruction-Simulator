@@ -23,4 +23,14 @@ public class CarHealthSystem : MonoBehaviour
         }
         return hp;
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.transform.tag == "ProjectileDamage"){
+            Damage(other.gameObject.GetComponent<CrystofProjectile>().damage);
+            Destroy(other.gameObject);
+        }
+        // if (References.Instance.projectileDestructionLayer == (References.Instance.projectileDestructionLayer | (1 << other.gameObject.layer))) {
+        //     Destroy(other.gameObject);
+        // }
+    }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Crystal
   - Crystal_Shard
   - Truck
+  - ProjectileDamage
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - IgnoreNavmesh
   - Ground
   - Structure
   - Player
