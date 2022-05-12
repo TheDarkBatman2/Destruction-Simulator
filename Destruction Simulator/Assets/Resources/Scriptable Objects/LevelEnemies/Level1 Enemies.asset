@@ -19,3 +19,15 @@ MonoBehaviour:
       count: 10
       spawnRate: 10
       spawnDelay: 3
+  - waveName: Beta
+    enemies:
+    - prefab: {fileID: 4162975050790303147, guid: 4d3c83ba53d80444786fc3e2f61a1e5b, type: 3}
+      count: 30
+      spawnRate: 7
+      spawnDelay: 5
+  - waveName: Omega
+    enemies:
+    - prefab: {fileID: 4162975050790303147, guid: 4d3c83ba53d80444786fc3e2f61a1e5b, type: 3}
+      count: 50
+      spawnRate: 5
+      spawnDelay: 8

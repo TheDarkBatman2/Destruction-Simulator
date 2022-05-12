@@ -10,7 +10,7 @@ public class GroundTile : MonoBehaviour
     {
         ground_spanwer = GameObject.FindObjectOfType<GroundSpawner>();
     }
-    void OnTriggerExit(Collider other){
+    void OnTriggerEnter(Collider other){
         if(other.name=="Player"){
             ground_spanwer.SpawnTile();
             gameObject.GetComponent<Collider>().enabled = false;

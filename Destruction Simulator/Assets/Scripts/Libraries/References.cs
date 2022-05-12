@@ -74,5 +74,8 @@ public class References : MonoBehaviour
         playerScore += score;
         playerScoreTextUi.text = playerScore.ToString();
     }
+    public float GetScore(){
+        return playerScore;
+    }
 
 }

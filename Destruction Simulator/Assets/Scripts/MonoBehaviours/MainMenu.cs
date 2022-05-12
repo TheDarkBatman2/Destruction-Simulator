@@ -6,6 +6,13 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
+    public TextMeshProUGUI HighScoreTxt ; 
+    void Start()
+    {
+        //display HighScore in menu
+        HighScoreTxt.text="HIGHSCORE : "+PlayerPrefs.GetInt("HIGHSCORE",0).ToString();
+        
+    }
     // Start is called before the first frame update
     public void playGame()
     {

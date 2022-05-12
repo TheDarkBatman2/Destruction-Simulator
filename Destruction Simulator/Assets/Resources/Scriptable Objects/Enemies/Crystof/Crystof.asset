@@ -15,8 +15,8 @@ MonoBehaviour:
   enemyName: Crystof
   enemyHp: 20
   enemyDamage: 2
-  enemySpeed: 5
-  score: 200
+  enemySpeed: 6
+  score: 20
   startShootDelay: 6
   repeatShootDelay: 6
   projectileForwardSpeed: 4
