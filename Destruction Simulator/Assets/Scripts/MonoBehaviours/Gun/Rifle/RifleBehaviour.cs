@@ -28,6 +28,10 @@ public class RifleBehaviour : MonoBehaviour
     {
         UpdateItemPanel();
 
+        // if (Input.GetKeyDown(KeyCode.R) && clipAmmo < rifleItem.clipSize){
+        //     StartCoroutine(Reload());
+        // }
+
         if (Input.GetMouseButton(0) && Time.time >= nextTimeToFire)
         {
             if (clipAmmo > 0 && reloaded) // idk if reloaded is necesary
@@ -55,12 +59,14 @@ public class RifleBehaviour : MonoBehaviour
     }
 
     IEnumerator Reload(){
-        // References.Instance.clipAmmoSlider.GetComponent<Animator>().SetBool("reload", true);
+        References.Instance.gunReloadAnimator.SetFloat("speed", 1/rifleItem.reloadTime);
+        References.Instance.gunReloadAnimator.SetBool("reload", true);
         yield return new WaitForSeconds(rifleItem.reloadTime);
+        // float addedBullets = Mathf.Min(rifleItem.clipSize ,totalAmmo)-clipAmmo;
         clipAmmo = Mathf.Min(rifleItem.clipSize ,totalAmmo);
         totalAmmo -= clipAmmo;
         reloaded = true;
-        // References.Instance.clipAmmoSlider.GetComponent<Animator>().SetBool("reload", false);
+        References.Instance.gunReloadAnimator.SetBool("reload", false);
     }
 
     // IEnumerator ReloadAnimation(float reloadTime, float amount){

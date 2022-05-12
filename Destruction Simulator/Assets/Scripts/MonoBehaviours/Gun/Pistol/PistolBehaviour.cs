@@ -30,6 +30,10 @@ public class PistolBehaviour : MonoBehaviour
     {
         UpdateItemPanel();
 
+        // if (Input.GetKeyDown(KeyCode.R)){
+        //     StartCoroutine(Reload());
+        // }
+
         if (Input.GetMouseButton(0) && Time.time >= nextTimeToFire && semiFireIsReady && isInitialized)
         {
             if (clipAmmo > 0 && reloaded) // idk if reloaded is necesary
@@ -65,12 +69,13 @@ public class PistolBehaviour : MonoBehaviour
     }
 
     IEnumerator Reload(){
-        // References.Instance.clipAmmoSlider.GetComponent<Animator>().SetBool("reload", true);
+        References.Instance.gunReloadAnimator.SetFloat("speed", 1/pistolItem.reloadTime);
+        References.Instance.gunReloadAnimator.SetBool("reload", true);
         yield return new WaitForSeconds(pistolItem.reloadTime);
         clipAmmo = Mathf.Min(pistolItem.clipSize ,totalAmmo);
         totalAmmo -= clipAmmo;
         reloaded = true;
-        // References.Instance.clipAmmoSlider.GetComponent<Animator>().SetBool("reload", false);
+        References.Instance.gunReloadAnimator.SetBool("reload", false);
     }
     
     public void UpdateItemPanel(){

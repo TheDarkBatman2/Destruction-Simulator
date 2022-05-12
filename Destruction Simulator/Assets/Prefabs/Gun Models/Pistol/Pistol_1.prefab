@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2189668874552183833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6992263821234891095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc7160fa1cd8714cb0d3ce30df70213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 8fc9673ec8c0c874b91845ed0dde4738, type: 2}
---- !u!114 &3611089076847215180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6992263821234891095}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5322453613378fe418f612baa3fd785b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pistolItem: {fileID: 11400000, guid: 8fc9673ec8c0c874b91845ed0dde4738, type: 2}
-  muzzleFlash: {fileID: 5435766986652509432}
-  GunTip: {fileID: 2524099054948491095}
-  totalAmmo: 100
-  clipAmmo: 0
-  reloaded: 0
 --- !u!1 &5258626572279135813
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +140,56 @@ Transform:
   m_Father: {fileID: 6292332692869716804}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &-4085236517481165699
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992263821234891095}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4ec2f1cd2a75414fa59d2a07ae3d3e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2189668874552183833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992263821234891095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc7160fa1cd8714cb0d3ce30df70213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 8fc9673ec8c0c874b91845ed0dde4738, type: 2}
+--- !u!114 &3611089076847215180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992263821234891095}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5322453613378fe418f612baa3fd785b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pistolItem: {fileID: 11400000, guid: 8fc9673ec8c0c874b91845ed0dde4738, type: 2}
+  muzzleFlash: {fileID: 5435766986652509432}
+  GunTip: {fileID: 2524099054948491095}
+  totalAmmo: 100
+  clipAmmo: 0
+  reloaded: 0
 --- !u!1001 &1308418770322731102
 PrefabInstance:
   m_ObjectHideFlags: 0

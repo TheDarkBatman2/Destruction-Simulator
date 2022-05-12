@@ -42,6 +42,7 @@ public class References : MonoBehaviour
     public GameObject sphere;
     // Navmesh
     public NavMeshSurface navMesh;
+    public Animator gunReloadAnimator;
     public float criticalDistance; // means if enemy is closer than this distance it will go out of formation
     // Game Stats
     public int curStage = 1;

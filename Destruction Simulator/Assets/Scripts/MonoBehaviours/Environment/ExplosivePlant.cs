@@ -16,7 +16,7 @@ public class ExplosivePlant : MonoBehaviour
             //if nearby is structure:
             if (nearby.gameObject.tag == "Enemy"){
                 EnemyBehaviour _eb = nearby.gameObject.GetComponent<EnemyBehaviour>();
-                _eb.Damage((nearby.transform.position-transform.position).magnitude * 5f);
+                _eb.Damage(Mathf.Max(explosionRange - (nearby.transform.position-transform.position).magnitude, 0) * 10f);
             }
         }
 

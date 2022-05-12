@@ -29,7 +29,6 @@ public class CarHealthSystem : MonoBehaviour
         else{
             hp -= hitPoint;
             References.Instance.truckSlider.value = hp;
-            print(hp);
         }
         return hp;
     }

@@ -1768,6 +1768,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 856772042}
     - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
+      propertyPath: gunReloadAnimator
+      value: 
+      objectReference: {fileID: 977116980}
+    - target: {fileID: 5829040394932244115, guid: 50fb77fc6995dad498d21685e54c580d, type: 3}
       propertyPath: playerScoreTextUi
       value: 
       objectReference: {fileID: 1321922474}
@@ -3727,7 +3731,7 @@ Animator:
   m_GameObject: {fileID: 977116978}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8c920278aa6eede469caa29625189cdd, type: 2}
+  m_Controller: {fileID: 9100000, guid: d4ec2f1cd2a75414fa59d2a07ae3d3e8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5706,6 +5710,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5127816798168057091, guid: ce1fb6f43ce82cb4096381a11d52c75d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127816798168057091, guid: ce1fb6f43ce82cb4096381a11d52c75d, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127816798168057091, guid: ce1fb6f43ce82cb4096381a11d52c75d, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127816798168057091, guid: ce1fb6f43ce82cb4096381a11d52c75d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6475869443946263467, guid: ce1fb6f43ce82cb4096381a11d52c75d, type: 3}
       propertyPath: m_Name
       value: Rifle_2
@@ -5766,7 +5786,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5127816798168057091, guid: ce1fb6f43ce82cb4096381a11d52c75d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce1fb6f43ce82cb4096381a11d52c75d, type: 3}
 --- !u!1001 &1955235445
 PrefabInstance:
@@ -5808,6 +5829,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: customPasses.Array.data[0].shaderPass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: customPasses.Array.data[1].shaderPass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].clearFlags
       value: 0
       objectReference: {fileID: 0}
@@ -5825,7 +5854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].filterFoldout
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].renderQueueType
@@ -5833,12 +5862,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].rendererFoldout
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].sortingCriteria
       value: 59
       objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: customPasses.Array.data[1].overrideMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b1dded7becff5d040b64834d0de4ebd5, type: 2}
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].layerMask.m_Bits
       value: 262144
@@ -5846,7 +5879,7 @@ PrefabInstance:
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].overrideMaterial
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: b1dded7becff5d040b64834d0de4ebd5, type: 2}
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[0].targetColorBuffer
       value: 0
@@ -5878,6 +5911,10 @@ PrefabInstance:
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].depthCompareFunction
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
+      propertyPath: customPasses.Array.data[1].overrideMaterialPassName
+      value: Forward
       objectReference: {fileID: 0}
     - target: {fileID: 4448259842124693818, guid: 6c8393a3f39a01a4fa9e8069c908db06, type: 3}
       propertyPath: customPasses.Array.data[2].overrideMaterialPassName
