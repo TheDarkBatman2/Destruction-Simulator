@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecf8dea71d6a364fbb29ebb17fb0229, type: 3}
   m_Name: RifleBullet_2
   m_EditorClassIdentifier: 
-  bulletDamage: 1
+  bulletDamage: 4
   bulletForce: 20
   bulletForceDistance: 0.9
   shotLine: {fileID: 0}

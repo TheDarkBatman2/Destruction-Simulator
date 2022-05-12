@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Crystof
   enemyHp: 20
-  enemyDamage: 2
-  enemySpeed: 6
+  enemyDamage: 0.1
+  enemySpeed: 4.5
   score: 20
   startShootDelay: 6
   repeatShootDelay: 6

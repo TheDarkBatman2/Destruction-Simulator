@@ -8,7 +8,16 @@ public class ArmySpawner : MonoBehaviour
     public LevelWavesSetup armySetup;
     public Formation formationManager;
     private void Start() {
-        StartWave();
+        StartCoroutine(spawnWaves());
+
+    }
+    
+    IEnumerator spawnWaves(){
+        for (int i = 0; i < 100; i++){
+            StartWave();
+            yield return new WaitForSeconds(15f);
+            References.Instance.curStage += 1;
+        }
     }
     public void StartWave(){
         foreach (LevelWavesSetup.EnemiesInArmy enemy in armySetup.wavesSetup[References.Instance.curStage-1].enemies){

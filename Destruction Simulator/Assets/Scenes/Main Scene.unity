@@ -392,9 +392,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1262,36 +1262,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 608990337}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &381838024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 381838025}
-  m_Layer: 0
-  m_Name: Formation Transform1 (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &381838025
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381838024}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5599995, y: 4.698, z: -20.71}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1401295150}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &409844035
 PrefabInstance:
@@ -2972,6 +2942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FpsManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7822120192743754046, guid: 9bde552d0437554418b0bdde1be07237, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bde552d0437554418b0bdde1be07237, type: 3}
 --- !u!1001 &921130604
@@ -3721,6 +3695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 977116979}
+  - component: {fileID: 977116980}
   m_Layer: 0
   m_Name: GunContainer
   m_TagString: Untagged
@@ -3736,12 +3711,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977116978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6400001, y: -0.66, z: 2.1800003}
+  m_LocalPosition: {x: 1.64, y: -0.66, z: 2.18}
   m_LocalScale: {x: 0.38017, y: 0.38016996, z: 1.0028884}
   m_Children: []
   m_Father: {fileID: 1436191866}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &977116980
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977116978}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c920278aa6eede469caa29625189cdd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &984366112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3819,7 +3813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96081f68c96e88a4191df1d4f35b240f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 20
   ScoreTxt: {fileID: 221726475}
   HighScoreTxt: {fileID: 1435288423}
   DeathUI: {fileID: 1752025402}
@@ -4564,7 +4558,6 @@ Transform:
   - {fileID: 535518194}
   - {fileID: 140354860}
   - {fileID: 732652307}
-  - {fileID: 381838025}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4586,7 +4579,6 @@ MonoBehaviour:
   - {fileID: 535518194}
   - {fileID: 140354860}
   - {fileID: 732652307}
-  - {fileID: 381838025}
 --- !u!1001 &1407915804
 PrefabInstance:
   m_ObjectHideFlags: 0
