@@ -4,18 +4,20 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class CarHealthSystem : MonoBehaviour
 {
     public float hp = 20f;
+    private float maxHp = 20f;
+    public Gradient healthBarGradiant;
+    public Image sliderFill;
     public TextMeshProUGUI ScoreTxt;
     public TextMeshProUGUI HighScoreTxt ;
     public GameObject DeathUI;
 
-
     private void Awake() {
         References.Instance.truckSlider.maxValue = hp;
         References.Instance.truckSlider.value = hp;
+        sliderFill.color = healthBarGradiant.Evaluate(1f); // move to references
     }
 
     public float Damage(float hitPoint){
@@ -23,12 +25,14 @@ public class CarHealthSystem : MonoBehaviour
             hp = 0;
             References.Instance.truckSlider.value = hp;
             Death();
+            sliderFill.color = healthBarGradiant.Evaluate(References.Instance.truckSlider.normalizedValue); // move to references
             //Destroy(this.gameObject);
 
         }
         else{
             hp -= hitPoint;
             References.Instance.truckSlider.value = hp;
+            sliderFill.color = healthBarGradiant.Evaluate(References.Instance.truckSlider.normalizedValue); // move to references
         }
         return hp;
     }
@@ -61,4 +65,6 @@ public class CarHealthSystem : MonoBehaviour
         //     Destroy(other.gameObject);
         // }
     }
+
+
 }

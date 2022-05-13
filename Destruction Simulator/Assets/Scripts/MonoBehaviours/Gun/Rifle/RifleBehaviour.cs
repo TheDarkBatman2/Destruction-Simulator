@@ -133,6 +133,7 @@ public class RifleBehaviour : MonoBehaviour
     private void OnDisable() {
         // disable ammo counter, no need because we are doing it in pickup controller every time
         isInitialized = false;
+        References.Instance.gunReloadAnimator.SetBool("reload", false);
     }
 
     private void OnEnable() {

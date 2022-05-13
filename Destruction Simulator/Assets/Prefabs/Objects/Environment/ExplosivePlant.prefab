@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vfx: {fileID: 1000012903210382, guid: b788c9b266117f842b31226e33510eaf, type: 3}
-  explosionRange: 5
+  explosionRange: 7
   explodeDeadline: 2
 --- !u!1001 &180478915213254414
 PrefabInstance:

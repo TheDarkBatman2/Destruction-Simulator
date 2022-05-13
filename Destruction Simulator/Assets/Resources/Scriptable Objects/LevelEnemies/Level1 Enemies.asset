@@ -31,3 +31,9 @@ MonoBehaviour:
       count: 30
       spawnRate: 8
       spawnDelay: 4
+  - waveName: Zeta
+    enemies:
+    - prefab: {fileID: 4162975050790303147, guid: 4d3c83ba53d80444786fc3e2f61a1e5b, type: 3}
+      count: 50
+      spawnRate: 8
+      spawnDelay: 3

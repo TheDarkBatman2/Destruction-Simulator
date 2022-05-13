@@ -65,9 +65,10 @@ public class EnemyBehaviour : MonoBehaviour
     {
         float force = col.impulse.magnitude;
         if(col.gameObject.tag=="Crystal_Shard"){
-            // if (velocity.magnitude > 0.1){
-            Damage(Mathf.Round(force * 100f) / 100f); // * crystal type damage
-            // }
+            // // if (velocity.magnitude > 0.1){
+            // Damage(Mathf.Round(force * 100f) / 100f * 20f); // * crystal type damage
+            // // }
+            Destroy(this.gameObject);
         }
     }
     
